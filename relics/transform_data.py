@@ -1,7 +1,7 @@
 import json
 
 # Load the Cavern Relic data
-file_path = "./relics/cavern_relic_data.json"
+file_path = "./relics/data/cavern_relic_data.json"
 with open(file_path, 'r') as file:
     cavern_relics_raw = json.load(file)
 
@@ -46,12 +46,12 @@ for relic in cavern_relics_raw:
     }
 
 # Save the transformed data for review
-output_path_relics = './relics/cavern_relics_transformed.json'
+output_path_relics = './relics/data/cavern_relics_transformed.json'
 with open(output_path_relics, 'w') as file:
     json.dump(cavern_relics, file, indent=4)
 
 # Save only the Bonus descriptions
-output_path_bonus = './relics/cavern_relics_transformed_bonus.json'
+output_path_bonus = './relics/data/cavern_relics_transformed_bonus.json'
 with open(output_path_bonus, 'w') as file:
     json.dump(cavern_relics_bonus, file, indent=4)
 

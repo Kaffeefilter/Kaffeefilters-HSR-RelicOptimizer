@@ -1,8 +1,4 @@
-relics/cavern_relic_data.json
-relics/planar_ornament_data.json
-relics/cavern_relics_transformed_bonus.json
-relics/cavern_relics_transformed_org.json
-relics/cavern_relics_transformed.json
+relics/data/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
