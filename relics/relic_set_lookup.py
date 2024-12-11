@@ -377,9 +377,20 @@ CAVERN_RELICS_DETAILS = {
             "description": "ATK increases by 12%.",
             "effects": {"type": "atk", "value": 0.12}
         },
-        "four_piece_bonus": { # <------- TODO HERE
+        "four_piece_bonus": { 
             "description": "For every DoT the target enemy is afflicted with, the wearer will ignore 6% of its DEF when dealing DMG to it. This effect is valid for a max of 3 DoTs.",
-            "effects": []
+            "effects": [{
+                "type": "def_ignore",
+                "stackable": True,
+                "stack_value": 0.06,
+                "max_stacks": 3,
+                "trigger_condition": {
+                    "type": "dot_count_on_target",  
+                    "comparison": ">=",
+                    "threshold": 1,
+                    "stacks_from_condition": True,  # Stacks are derived from the number of DoTs
+                }
+            }]
         }
     },
     "sacerdos'_relived_ordeal": {
@@ -391,11 +402,22 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/6e/Item_Sacerdos%27_Arduous_Boots.png",
         "two_piece_bonus": {
             "description": "Increases SPD by 6%.",
-            "effects": []
+            "effects": {"type": "spd", "value": 0.06}
         },
         "four_piece_bonus": {
             "description": "When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
-            "effects": []
+            "effects": [{
+                "type": "crit_dmg",
+                "stackable": True,
+                "stack_value": 0.18,
+                "max_stacks": 2,
+                "duration": 2,
+                "target": "ally",
+                "trigger_condition": {
+                    "type": "on_skill_use_or_ultimate",
+                    "target": "ally"
+                }
+            }]
         }
     },
     "scholar_lost_in_erudition": {
@@ -407,11 +429,24 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fa/Item_Scholar%27s_Felt_Snowboots.png",
         "two_piece_bonus": {
             "description": "Increases CRIT Rate by 8%.",
-            "effects": []
+            "effects": {"type": "crit_rate", "value": 0.08}
         },
         "four_piece_bonus": {
             "description": "Increases DMG dealt by Skill and Ultimate by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
-            "effects": []
+            "effects": [{
+                "type": "skill_dmg",
+                "value": 0.20
+            },{
+                "type": "ultimate_dmg",
+                "value": 0.20
+            },{
+                "type": "skill_dmg",
+                "value": 0.25,
+                "duration": "next_skill_use",
+                "trigger_condition": {
+                    "type": "on_ultimate"
+                }
+            }]
         }
     },
     "the_ashblazing_grand_duke": {
@@ -423,12 +458,12 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/1c/Item_Grand_Duke%27s_Ceremonial_Boots.png",
         "two_piece_bonus": {
             "description": "Increases the DMG dealt by follow-up attacks by 20%.",
-            "effects": []
+            "effects": {"type": "follow_up_dmg", "value": 0.20}
         },
         "four_piece_bonus": {
             "description": "When the wearer uses follow-up attacks, increases the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a follow-up attack.",
             "effects": []
-        }
+        }                   # <----------- TODO HERE --------------------------------------------------------------------------
     },
     "the_wind-soaring_valorous": {
         "name": "The Wind-Soaring Valorous",

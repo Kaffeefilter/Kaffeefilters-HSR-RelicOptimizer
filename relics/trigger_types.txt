@@ -18,12 +18,14 @@ Combat Actions and Abilities:
 - on_follow_up: When a follow-up attack is performed.
 - on_debuff_inflict: When a debuff is inflicted on a target.
 - on_ally_target: When a skill or Ultimate is used on an ally.
+- on_skill_use_or_ultimate: When a skill ability or the Ultimate ability is used.
 
 Damage or Status-based Triggers:
 - on_hit: When the wearer is hit.
 - on_critical_hit: When a critical hit is achieved.
 - on_weakness_break: When a weakness is broken.
 - on_dot: When a damage-over-time (DoT) effect is active.
+- dot_count_on_target: Triggers when the number of damage-over-time (DoT) effects on the target meets a specific threshold.
 - on_imprisoned: When the target is in the Imprisoned status.
 - on_debuff: When the target has a debuff.
 - debuff_count_on_target: Triggers when the number of debuffs on the target meets a specific threshold.
