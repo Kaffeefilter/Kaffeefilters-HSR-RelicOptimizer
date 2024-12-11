@@ -592,7 +592,18 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7f/Item_Belobog%27s_Iron_Defense.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's DEF by 15%. When the wearer's Effect Hit Rate is 50% or higher, the wearer gains an extra 15% DEF.",
-            "effects": []
+            "effects": [{
+                "type": "def",
+                "value": 0.15
+            },{
+                "type": "def",
+                "value": 0.15,
+                "trigger_condition": {
+                    "type": "effect_hit_rate",
+                    "comparison": ">=",
+                    "threshold": 0.50
+                }
+            }]
         }
     },
     "broken_keel": {
@@ -602,7 +613,19 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/92/Item_Insumousu%27s_Frayed_Hawser.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's Effect RES by 10%. When the wearer's Effect RES is at 30% or higher, all allies' CRIT DMG increases by 10%.",
-            "effects": []
+            "effects": [{
+                "type": "effect_resistance",
+                "value": 0.10,
+            },{
+                "type": "crit_dmg",
+                "value": 0.10,
+                "target": "all_allies",
+                "trigger_condition": {
+                    "type": "effect_resistance",
+                    "comparison": ">=",
+                    "threshold": 0.30
+                }
+            }]
         }
     },
     "celestial_differentiator": {
@@ -612,7 +635,22 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/36/Item_Planet_Screwllum%27s_Ring_System.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's CRIT DMG by 16%. When the wearer's current CRIT DMG reaches 120% or higher, after entering battle, the wearer's CRIT Rate increases by 60% until the end of their first attack.",
-            "effects": []
+            "effects": [{
+                "type": "crit_dmg",
+                "value": 0.16,
+            },{
+                "type": "crit_rate",
+                "value": 0.60,
+                "duration": "next_attack",
+                "trigger_condition": {
+                    "type": "start_of_battle", 
+                    "stat_requirement": {
+                        "type": "crit_dmg",
+                        "comparison": ">=",
+                        "threshold": 1.20
+                    }
+                }
+            }]
         }
     },
     "duran,_dynasty_of_running_wolves": {
@@ -622,7 +660,7 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/46/Item_Duran%27s_Mechabeast_Bridle.png",
         "two_piece_bonus": {
             "description": "When an ally uses follow-up attacks, the wearer gains 1 stack of Merit, stacking up to 5 time(s). Each stack of Merit increases the DMG dealt by the wearer's follow-up attacks by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%.",
-            "effects": []
+            "effects": [] # TODO 
         }
     },
     "firmament_frontline:_glamoth": {
