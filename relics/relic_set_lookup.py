@@ -12,13 +12,14 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer uses their Skill, increases the wearer's ATK by 20% for 1 turn(s).",
-            "effects": {
-                "on_skill_use": {
-                    "type": "atk",
-                    "value": 0.20,
-                    "duration": 1,
+            "effects": [{
+                "type": "atk",
+                "value": 0.20,
+                "duration": 1,
+                "trigger_condition": {
+                    "type": "on_skill_use"
                 }
-            }
+            }]
         }
     },
     "champion_of_streetwise_boxing": {
@@ -34,20 +35,15 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "After the wearer attacks or is hit, their ATK increases by 5% for the rest of the battle. This effect can stack up to 5 time(s).",
-            "effects": {
-                "after_attack": {
-                    "type": "atk",
-                    "stackable": True,
-                    "stack_value": 0.05,  # 5% pro Stack
-                    "max_stacks": 5,     # Maximal 5 Stacks
-                },
-                "after_hit": {
-                    "type": "atk",
-                    "stackable": True,
-                    "stack_value": 0.05,  # 5% pro Stack
-                    "max_stacks": 5,     # Maximal 5 Stacks
+            "effects": [{
+                "type": "atk",
+                "stackable": True,
+                "stack_value": 0.05,  # 5% pro Stack
+                "max_stacks": 5,     # Maximal 5 Stacks
+                "trigger_condition": {
+                    "type": "on_attack_or_hit"
                 }
-            }
+            }]
         }
     },
     "eagle_of_twilight_line": {
@@ -63,12 +59,13 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "After the wearer uses their Ultimate, their action is Advanced Forward by 25%.",
-            "effects": {
-                "after_ultimate": {
-                    "type": "action_advance",
-                    "value": 0.25,
+            "effects": [{
+                "type": "action_advance",
+                "value": 0.25,
+                "trigger_condition": {
+                    "type": "on_ultimate"
                 }
-            }
+            }]
         }
     },
     "firesmith_of_lava-forging": {
@@ -84,14 +81,17 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "Increases the wearer's Skill DMG by 12%. After unleashing Ultimate, increases the wearer's Fire DMG by 12% for the next attack.",
-            "effects": {
-                "type": "skill_dmg", "value": 0.12,
-                "after_ultimate": {
-                    "type": "fire_dmg",
-                    "value": 0.12,
-                    "duration": "next_attack"
+            "effects": [{
+                "type": "skill_dmg", 
+                "value": 0.12
+            },{
+                "type": "fire_dmg",
+                "value": 0.12,
+                "duration": "next_attack",
+                "trigger_condition": {
+                    "type": "on_ultimate"
                 }
-            }
+            }]
         }
     },
     "genius_of_brilliant_stars": {
@@ -107,12 +107,16 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
-            "effects": {
-                "type": "def_ignore", "value": 0.10,
-                "on_quantum_weakness": {
-                    "type": "def_ignore", "value": 0.10
+            "effects": [{
+                "type": "ignore_def", 
+                "value": 0.10,
+            },{
+                "type": "ignore_def",
+                "value": 0.10,
+                "trigger_condition": {
+                    "type": "on_quantum_weakness"
                 }
-            }
+            }]
         }
     },
     "guard_of_wuthering_snow": {
@@ -128,18 +132,23 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy.",
-            "effects": {
-                "on_turn_begin": {
-                    "type": "heal",
-                    "target": "self",
-                    "value": 0.08,
-                    "trigger_condition": {
-                        "type": "hp",
-                        "comparison": "<=",
-                        "threshold": 0.5
-                    }
+            "effects": [{
+                "type": "hp",
+                "value": 0.08,
+                "trigger_condition": {
+                    "type": "hp",
+                    "comparison": "<=",
+                    "threshold": 0.5
                 }
-            }
+            },{
+                "type": "energy_gain",
+                "value": 5,
+                "trigger_condition": {
+                    "type": "hp",
+                    "comparison": "<=",
+                    "threshold": 0.5
+                }
+            }]
         }
     },
     "hunter_of_glacial_forest": {
@@ -151,11 +160,18 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e6/Item_Hunter%27s_Soft_Elkskin_Boots.png",
         "two_piece_bonus": {
             "description": "Increases Ice DMG by 10%.",
-            "effects": []
+            "effects": {"type": "ice_dmg", "value": 0.10}
         },
         "four_piece_bonus": {
             "description": "After the wearer uses their Ultimate, their CRIT DMG increases by 25% for 2 turn(s).",
-            "effects": []
+            "effects": {
+                "type": "crit_dmg",
+                "value": 0.25,
+                "duration": 2,
+                "trigger_condition": {
+                    "type": "on_ultimate"
+                }
+            }
         }
     },
     "iron_cavalry_against_the_scourge": {
@@ -167,11 +183,27 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/40/Item_Iron_Cavalry%27s_Skywalk_Greaves.png",
         "two_piece_bonus": {
             "description": "Increases Break Effect by 16%.",
-            "effects": []
+            "effects": {"type": "break_effect", "value": 0.16}
         },
         "four_piece_bonus": {
             "description": "If the wearer's Break Effect is 150% or higher, the Break DMG dealt to the enemy target ignores 10% of their DEF. If the wearer's Break Effect is 250% or higher, the Super Break DMG dealt to the enemy target additionally ignores 15% of their DEF.",
-            "effects": []
+            "effects": [{
+                "type": "break_dmg_ignore_def",
+                "value": 0.10,
+                "trigger_condition": {
+                    "type": "break_effect",
+                    "comparison": ">=",
+                    "threshold": 1.5
+                }
+            },{
+                "type": "super_break_dmg_ignore_def",   # super break buffs = normal break buffs + super break buffs
+                "value": 0.15,
+                "trigger_condition": {
+                    "type": "break_effect",
+                    "comparison": ">=",
+                    "threshold": 2.5
+                }
+            }]
         }
     },
     "knight_of_purity_palace": {
@@ -183,11 +215,14 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/ea/Item_Knight%27s_Iron_Boots_of_Order.png",
         "two_piece_bonus": {
             "description": "Increases DEF by 15%.",
-            "effects": []
+            "effects": {"type": "def", "value": 0.15}
         },
         "four_piece_bonus": {
             "description": "Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.",
-            "effects": []
+            "effects": [{
+                "type": "shield_strength",
+                "value": 0.20
+            }]
         }
     },
     "longevous_disciple": {
@@ -199,11 +234,19 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7f/Item_Disciple%27s_Celestial_Silk_Sandals.png",
         "two_piece_bonus": {
             "description": "Increases Max HP by 12%.",
-            "effects": []
-        },
+            "effects": {"type": "max_hp", "value": 0.12}
+        }, # <--- you are here
         "four_piece_bonus": {
             "description": "When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.",
-            "effects": []
+            "effects": {
+                "on_hp_loss": {
+                    "type": "crit_rate",
+                    "stackable": True,
+                    "stack_value": 0.08,
+                    "max_stacks": 2,
+                    "duration": 2
+                }
+            }
         }
     },
     "messenger_traversing_hackerspace": {
@@ -215,11 +258,18 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/be/Item_Messenger%27s_Par-kool_Sneakers.png",
         "two_piece_bonus": {
             "description": "Increases SPD by 6%.",
-            "effects": []
+            "effects": {"type": "spd", "value": 0.06}
         },
         "four_piece_bonus": {
             "description": "When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.",
-            "effects": []
+            "effects": {
+                "on_ultimate": {
+                    "type": "spd",
+                    "target": "all",
+                    "value": 0.12,
+                    "stackable": False,
+                }
+            }
         }
     },
     "musketeer_of_wild_wheat": {
@@ -231,11 +281,15 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/bf/Item_Musketeer%27s_Rivets_Riding_Boots.png",
         "two_piece_bonus": {
             "description": "ATK increases by 12%.",
-            "effects": []
+            "effects": {"type": "atk", "value": 0.12}
         },
         "four_piece_bonus": {
             "description": "The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%.",
-            "effects": []
+            "effects": {[
+                {"type": "spd", "value": 0.06}
+            ],[
+                {"type": "basic_atk", "value": 0.10}
+            ]}
         }
     },
     "passerby_of_wandering_cloud": {
