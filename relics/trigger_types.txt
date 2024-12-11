@@ -26,7 +26,9 @@ Damage or Status-based Triggers:
 - on_dot: When a damage-over-time (DoT) effect is active.
 - on_imprisoned: When the target is in the Imprisoned status.
 - on_debuff: When the target has a debuff.
+- debuff_count_on_target: Triggers when the number of debuffs on the target meets a specific threshold.
 - on_shield: When the wearer is shielded.
+- on_hit_or_hp_consumed: When the wearer is hit or their HP is consumed by themselves or an ally.
 
 Elemental Weakness Triggers:
 - on_fire_weakness: When the target has Fire weakness.

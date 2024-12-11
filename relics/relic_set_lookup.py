@@ -235,18 +235,19 @@ CAVERN_RELICS_DETAILS = {
         "two_piece_bonus": {
             "description": "Increases Max HP by 12%.",
             "effects": {"type": "max_hp", "value": 0.12}
-        }, # <--- you are here
+        },
         "four_piece_bonus": {
             "description": "When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.",
-            "effects": {
-                "on_hp_loss": {
-                    "type": "crit_rate",
-                    "stackable": True,
-                    "stack_value": 0.08,
-                    "max_stacks": 2,
-                    "duration": 2
+            "effects": [{
+                "type": "crit_rate",
+                "stackable": True,
+                "stack_value": 0.08,
+                "max_stacks": 2,
+                "duration": 2,
+                "trigger_condition": {
+                    "type": "on_hit_or_hp_consumed"
                 }
-            }
+            }]
         }
     },
     "messenger_traversing_hackerspace": {
@@ -263,11 +264,13 @@ CAVERN_RELICS_DETAILS = {
         "four_piece_bonus": {
             "description": "When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.",
             "effects": {
-                "on_ultimate": {
-                    "type": "spd",
-                    "target": "all",
-                    "value": 0.12,
-                    "stackable": False,
+                "type": "spd",
+                "target": "all_allies",
+                "value": 0.12,
+                "duration": 1,
+                "stackable": False,
+                "trigger_condition": {
+                    "type": "on_ultimate"
                 }
             }
         }
@@ -288,7 +291,7 @@ CAVERN_RELICS_DETAILS = {
             "effects": {[
                 {"type": "spd", "value": 0.06}
             ],[
-                {"type": "basic_atk", "value": 0.10}
+                {"type": "basic_atk_dmg", "value": 0.10}
             ]}
         }
     },
@@ -301,11 +304,17 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7d/Item_Passerby%27s_Stygian_Hiking_Boots.png",
         "two_piece_bonus": {
             "description": "Increases Outgoing Healing by 10%.",
-            "effects": []
+            "effects": {"type": "outgoing_healing", "value": 0.10}
         },
         "four_piece_bonus": {
             "description": "At the start of the battle, immediately regenerates 1 Skill Point.",
-            "effects": []
+            "effects": [{
+                "type": "skill_point_gain",
+                "value": 1,
+                "trigger_condition": {
+                    "type": "start_of_battle"
+                }
+            }]
         }
     },
     "pioneer_diver_of_dead_waters": {
@@ -317,11 +326,44 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/03/Item_Pioneer%27s_Starfaring_Anchor.png",
         "two_piece_bonus": {
             "description": "Increases DMG dealt to enemies with debuffs by 12%.",
-            "effects": []
+            "effects": {"type": "dmg_to_debuffed", "value": 0.12}
         },
         "four_piece_bonus": {
             "description": "Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).",
-            "effects": []
+            "effects": [{
+                "type": "crit_rate",
+                "value": 0.04
+            },{
+                "type": "crit_dmg",
+                "value": 0.08,
+                "trigger_condition": {
+                    "type": "on_debuff",
+                    "comparison": "==",
+                    "threshold": 2
+                },
+                "enhancement": {
+                    "value_multiplier": 2,
+                    "duration": 1,
+                    "trigger_condition": {
+                        "type": "on_debuff_inflict"
+                    }
+                }
+            }, {
+                "type": "crit_dmg",
+                "value": 0.12,
+                "trigger_condition": {
+                    "type": "on_debuff",
+                    "comparison": ">=",
+                    "threshold": 3
+                },
+                "enhancement": {
+                    "value_multiplier": 2,
+                    "duration": 1,
+                    "trigger_condition": {
+                        "type": "on_debuff_inflict"
+                    }
+                }
+            }]
         }
     },
     "prisoner_in_deep_confinement": {
@@ -333,9 +375,9 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/2/2e/Item_Prisoner%27s_Restrictive_Fetters.png",
         "two_piece_bonus": {
             "description": "ATK increases by 12%.",
-            "effects": []
+            "effects": {"type": "atk", "value": 0.12}
         },
-        "four_piece_bonus": {
+        "four_piece_bonus": { # <------- TODO HERE
             "description": "For every DoT the target enemy is afflicted with, the wearer will ignore 6% of its DEF when dealing DMG to it. This effect is valid for a max of 3 DoTs.",
             "effects": []
         }
