@@ -22,6 +22,7 @@ Combat Actions and Abilities:
 
 Damage or Status-based Triggers:
 - on_hit: When the wearer is hit.
+- on_follow_up_hit: Triggers for each individual hit within a follow-up attack.
 - on_critical_hit: When a critical hit is achieved.
 - on_weakness_break: When a weakness is broken.
 - on_dot: When a damage-over-time (DoT) effect is active.

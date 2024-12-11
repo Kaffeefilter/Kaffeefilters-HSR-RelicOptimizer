@@ -462,8 +462,20 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer uses follow-up attacks, increases the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a follow-up attack.",
-            "effects": []
-        }                   # <----------- TODO HERE --------------------------------------------------------------------------
+            "effects": [{
+                "type": "atk",
+                "value_per_stack": 0.06,
+                "max_stacks": 8,
+                "duration": 3,
+                "stackable": True,
+                "stack_removal_condition": { 
+                    "type": "on_follow_up"  # Stacks are removed on the next follow-up attack
+                },
+                "trigger_condition": {
+                    "type": "on_follow_up_hit",  # Triggered for each hit within a follow-up attack
+                }
+            }]
+        }
     },
     "the_wind-soaring_valorous": {
         "name": "The Wind-Soaring Valorous",
@@ -474,11 +486,21 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/59/Item_Valorous_Greaves_of_Pursuing_Hunt.png",
         "two_piece_bonus": {
             "description": "Increases ATK by 12%.",
-            "effects": []
+            "effects": {"type": "atk", "value": 0.12}
         },
         "four_piece_bonus": {
             "description": "Increases the wearer's CRIT Rate by 6%. When the wearer uses a follow-up attack, increases the DMG dealt by Ultimate by 36%, lasting for 1 turn(s).",
-            "effects": []
+            "effects": [{
+                "type": "crit_rate",
+                "value": 0.06,
+            },{
+                "type": "ultimate_dmg",
+                "value": 0.36,
+                "duration": 1,
+                "trigger_condition": {
+                    "type": "on_follow_up"
+                }
+            }]
         }
     },
     "thief_of_shooting_meteor": {
@@ -490,11 +512,20 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d4/Item_Thief%27s_Meteor_Boots.png",
         "two_piece_bonus": {
             "description": "Increases Break Effect by 16%.",
-            "effects": []
+            "effects": {"type": "break_effect", "value": 0.16}
         },
         "four_piece_bonus": {
             "description": "Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy.",
-            "effects": []
+            "effects": [{
+                "type": "break_effect",
+                "value": 0.16
+            },{
+                "type": "energy_gain",
+                "value": 3,
+                "trigger_condition": {
+                    "type": "on_weakness_break"
+                }
+            }]
         }
     },
     "wastelander_of_banditry_desert": {
@@ -506,11 +537,23 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/46/Item_Wastelander%27s_Powered_Greaves.png",
         "two_piece_bonus": {
             "description": "Increases Imaginary DMG by 10%.",
-            "effects": []
+            "effects": {"type": "imaginary_dmg", "value": 0.10}
         },
         "four_piece_bonus": {
             "description": "When attacking debuffed enemies, the wearer's CRIT Rate increases by 10%, and their CRIT DMG increases by 20% against Imprisoned enemies.",
-            "effects": []
+            "effects": [{
+                "type": "crit_rate",
+                "value": 0.10,
+                "trigger_condition": {
+                    "type": "on_debuff",
+                }
+            },{
+                "type": "crit_damage",
+                "value": 0.20,
+                "trigger_condition": {
+                    "type": "on_imprisoned",
+                }
+            }]
         }
     },
     "watchmaker,_master_of_dream_machinations": {
@@ -522,11 +565,21 @@ CAVERN_RELICS_DETAILS = {
         "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e4/Item_Watchmaker%27s_Dream-Concealing_Dress_Shoes.png",
         "two_piece_bonus": {
             "description": "Increases Break Effect by 16%.",
-            "effects": []
+            "effects": {"type": "break_effect", "value": 0.16}
         },
         "four_piece_bonus": {
             "description": "When the wearer uses their Ultimate on an ally, all allies' Break Effect increases by 30% for 2 turn(s). This effect cannot be stacked.",
-            "effects": []
+            "effects": [{
+                "type": "break_effect",
+                "value": 0.30,
+                "duration": 2,
+                "target": "all_allies",
+                "stackable": True,
+                "trigger_condition": {
+                    "type": "on_ultimate",
+                    "target": "ally"
+                }
+            }]
         }
     }
 }
