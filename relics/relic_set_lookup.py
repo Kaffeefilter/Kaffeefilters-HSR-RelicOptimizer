@@ -587,27 +587,182 @@ CAVERN_RELICS_DETAILS = {
 PLANAR_ORNAMENTS_DETAILS = {
     "belobog_of_the_architects": {
         "name": "Belobog of the Architects",
-        "set_icon_url": "",  
-        "planar_sphere_icon_url": "",  
-        "link_rope_icon_url": "",  
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/99/Item_Belobog_of_the_Architects.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/2/2f/Item_Belobog%27s_Fortress_of_Preservation.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7f/Item_Belobog%27s_Iron_Defense.png",
         "two_piece_bonus": {
-            "description": (
-                "Increases the wearer's DEF by 15%. "
-                "When the wearer's Effect Hit Rate is 50% or higher, the wearer gains an extra 15% DEF."
-            ),
-            "effects": [
-                {"type": "def", "value": 0.15}, 
-                {
-                    "type": "def",
-                    "value": 0.15,  
-                    "trigger_condition": {
-                        "type": "effect_hit_rate",
-                        "comparison": ">=",
-                        "threshold": 50, 
-                    },
-                },
-            ],
-        },
+            "description": "Increases the wearer's DEF by 15%. When the wearer's Effect Hit Rate is 50% or higher, the wearer gains an extra 15% DEF.",
+            "effects": []
+        }
     },
-    # ...
+    "broken_keel": {
+        "name": "Broken Keel",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/00/Item_Broken_Keel.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/17/Item_Insumousu%27s_Whalefall_Ship.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/92/Item_Insumousu%27s_Frayed_Hawser.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's Effect RES by 10%. When the wearer's Effect RES is at 30% or higher, all allies' CRIT DMG increases by 10%.",
+            "effects": []
+        }
+    },
+    "celestial_differentiator": {
+        "name": "Celestial Differentiator",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/c2/Item_Celestial_Differentiator.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/66/Item_Planet_Screwllum%27s_Mechanical_Sun.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/36/Item_Planet_Screwllum%27s_Ring_System.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's CRIT DMG by 16%. When the wearer's current CRIT DMG reaches 120% or higher, after entering battle, the wearer's CRIT Rate increases by 60% until the end of their first attack.",
+            "effects": []
+        }
+    },
+    "duran,_dynasty_of_running_wolves": {
+        "name": "Duran, Dynasty of Running Wolves",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d5/Item_Duran%2C_Dynasty_of_Running_Wolves.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/2/2e/Item_Duran%27s_Tent_of_Golden_Sky.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/46/Item_Duran%27s_Mechabeast_Bridle.png",
+        "two_piece_bonus": {
+            "description": "When an ally uses follow-up attacks, the wearer gains 1 stack of Merit, stacking up to 5 time(s). Each stack of Merit increases the DMG dealt by the wearer's follow-up attacks by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%.",
+            "effects": []
+        }
+    },
+    "firmament_frontline:_glamoth": {
+        "name": "Firmament Frontline: Glamoth",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/f7/Item_Firmament_Frontline_Glamoth.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8e/Item_Glamoth%27s_Iron_Cavalry_Regiment.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7d/Item_Glamoth%27s_Silent_Tombstone.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
+            "effects": []
+        }
+    },
+    "fleet_of_the_ageless": {
+        "name": "Fleet of the Ageless",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/a1/Item_Fleet_of_the_Ageless.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/90/Item_The_Xianzhou_Luofu%27s_Celestial_Ark.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/0b/Item_The_Xianzhou_Luofu%27s_Ambrosial_Arbor_Vines.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's Max HP by 12%. When the wearer's SPD reaches 120 or higher, all allies' ATK increases by 8%.",
+            "effects": []
+        }
+    },
+    "forge_of_the_kalpagni_lantern": {
+        "name": "Forge of the Kalpagni Lantern",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/bb/Item_Forge_of_the_Kalpagni_Lantern.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/1b/Item_Forge%27s_Lotus_Lantern_Wick.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/86/Item_Forge%27s_Heavenly_Flamewheel_Silk.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's SPD by 6%. When the wearer hits an enemy target that has Fire Weakness, the wearer's Break Effect increases by 40%, lasting for 1 turn(s).",
+            "effects": []
+        }
+    },
+    "inert_salsotto": {
+        "name": "Inert Salsotto",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/f5/Item_Inert_Salsotto.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/3c/Item_Salsotto%27s_Moving_City.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/cc/Item_Salsotto%27s_Terminator_Line.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the wearer's Ultimate and follow-up attack DMG increases by 15%.",
+            "effects": []
+        }
+    },
+    "izumo_gensei_and_takama_divine_realm": {
+        "name": "Izumo Gensei and Takama Divine Realm",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/5a/Item_Izumo_Gensei_and_Takama_Divine_Realm.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b5/Item_Izumo%27s_Magatsu_no_Morokami.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/66/Item_Izumo%27s_Blades_of_Origin_and_End.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's ATK by 12%. When entering battle, if at least one other ally follows the same Path as the wearer, then the wearer's CRIT Rate increases by 12%.",
+            "effects": []
+        }
+    },
+    "lushaka,_the_sunken_seas": {
+        "name": "Lushaka, the Sunken Seas",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/6b/Item_Lushaka%2C_the_Sunken_Seas.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/66/Item_Lushaka%27s_Waterscape.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/eb/Item_Lushaka%27s_Twinlanes.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
+            "effects": []
+        }
+    },
+    "pan-cosmic_commercial_enterprise": {
+        "name": "Pan-Cosmic Commercial Enterprise",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/92/Item_Pan-Cosmic_Commercial_Enterprise.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7f/Item_The_IPC%27s_Mega_HQ.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/47/Item_The_IPC%27s_Trade_Route.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's Effect Hit Rate by 10%. Meanwhile, the wearer's ATK increases by an amount that is equal to 25% of the current Effect Hit Rate, up to a maximum of 25%.",
+            "effects": []
+        }
+    },
+    "penacony,_land_of_the_dreams": {
+        "name": "Penacony, Land of the Dreams",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/2/21/Item_Penacony%2C_Land_of_the_Dreams.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8d/Item_Penacony%27s_Grand_Hotel.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/13/Item_Penacony%27s_Dream-Seeking_Tracks.png",
+        "two_piece_bonus": {
+            "description": "Increases wearer's Energy Regeneration Rate by 5%. Increases DMG by 10% for all other allies that are of the same Type as the wearer.",
+            "effects": []
+        }
+    },
+    "rutilant_arena": {
+        "name": "Rutilant Arena",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/70/Item_Rutilant_Arena.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fb/Item_Taikiyan_Laser_Stadium.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/54/Item_Taikiyan%27s_Arclight_Race_Track.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, the wearer's Basic ATK and Skill DMG increase by 20%.",
+            "effects": []
+        }
+    },
+    "sigonia,_the_unclaimed_desolation": {
+        "name": "Sigonia, the Unclaimed Desolation",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/de/Item_Sigonia%2C_the_Unclaimed_Desolation.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/f4/Item_Sigonia%27s_Gaiathra_Berth.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8f/Item_Sigonia%27s_Knot_of_Cyclicality.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's CRIT Rate by 4%. When an enemy target gets defeated, the wearer's CRIT DMG increases by 4%, stacking up to 10 time(s).",
+            "effects": []
+        }
+    },
+    "space_sealing_station": {
+        "name": "Space Sealing Station",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/78/Item_Space_Sealing_Station.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/da/Item_Herta%27s_Space_Station.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/da/Item_Herta%27s_Wandering_Trek.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's ATK by 12%. When the wearer's SPD reaches 120 or higher, the wearer's ATK increases by an extra 12%.",
+            "effects": []
+        }
+    },
+    "sprightly_vonwacq": {
+        "name": "Sprightly Vonwacq",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b6/Item_Sprightly_Vonwacq.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/ea/Item_Vonwacq%27s_Island_of_Birth.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/f1/Item_Vonwacq%27s_Islandic_Coast.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+            "effects": []
+        }
+    },
+    "talia:_kingdom_of_banditry": {
+        "name": "Talia: Kingdom of Banditry",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/92/Item_Talia_Kingdom_of_Banditry.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/84/Item_Talia%27s_Nailscrap_Town.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fc/Item_Talia%27s_Exposed_Electric_Wire.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's Break Effect by 16%. When the wearer's SPD reaches 145 or higher, the wearer's Break Effect increases by an extra 20%.",
+            "effects": []
+        }
+    },
+    "the_wondrous_bananamusement_park": {
+        "name": "The Wondrous BananAmusement Park",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b1/Item_The_Wondrous_BananAmusement_Park.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/06/Item_BananAmusement_Park%27s_Memetic_Cables.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8e/Item_BananAmusement_Park%27s_BananAxis_Plaza.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's CRIT DMG by 16%. When a target summoned by the wearer is on the field, CRIT DMG additionally increases by 32%.",
+            "effects": []
+        }
+    }
 }
