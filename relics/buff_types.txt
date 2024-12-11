@@ -1,0 +1,55 @@
+General Stats:
+- atk: Increases Attack.
+- def: Increases Defense.
+- hp: Increases current HP.
+- max_hp: Increases maximum HP.
+- spd: Increases Speed.
+
+Offensive Stats:
+- crit_rate: Increases Critical Rate.
+- crit_dmg: Increases Critical Damage.
+- break_effect: Increases Break Effect.
+- effect_hit_rate: Increases Effect Hit Rate for applying debuffs.
+- elemental_dmg: Generic increase to Elemental Damage.
+- physical_dmg: Increases Physical Damage.
+- fire_dmg: Increases Fire Damage.
+- ice_dmg: Increases Ice Damage.
+- lightning_dmg: Increases Lightning Damage.
+- wind_dmg: Increases Wind Damage.
+- quantum_dmg: Increases Quantum Damage.
+- imaginary_dmg: Increases Imaginary Damage.
+
+Defensive Stats:
+- dmg_reduction: Reduces incoming damage.
+- shield_strength: Increases the strength of shields.
+- effect_resistance: Increases resistance to debuffs.
+
+Healing and Recovery:
+- healing_received: Increases healing received by the wearer.
+- outgoing_healing: Increases healing provided to others.
+- hp_regeneration: Restores HP over time.
+- energy_regeneration: Restores energy over time.
+
+Utility and Combat Mechanics:
+- action_advance: Advances the wearer's turn.
+- energy_gain: Instantly restores energy.
+- skill_point_gain: Instantly restores skill points.
+- buff_duration: Extends the duration of buffs.
+
+Special Effects:
+- def_ignore: Allows damage to ignore a percentage of the target's DEF.
+- break_damage_ignore_def: Allows Break Damage to ignore a percentage of the target's DEF.
+- super_break_damage_ignore_def: Allows Super Break Damage to ignore a percentage of the target's DEF.
+- dmg_increase: Generic damage increase that applies to all damage types.
+- follow_up_dmg: Increases damage dealt by follow-up attacks.
+- ultimate_dmg: Increases damage dealt by Ultimate abilities.
+- skill_dmg: Increases damage dealt by Skill abilities.
+- basic_atk_dmg: Increases damage dealt by Basic Attacks.
+- aoe_dmg: Increases damage dealt to multiple targets.
+- single_target_dmg: Increases damage dealt to a single target.
+- super_break_dmg: Increases damage dealt during Super Break.
+
+Debuff Interaction:
+- dmg_to_debuffed: Increases damage dealt to enemies with debuffs.
+- dmg_to_weakness: Increases damage dealt to enemies with exposed weaknesses.
+- dmg_to_imprisoned: Increases damage dealt to Imprisoned enemies.

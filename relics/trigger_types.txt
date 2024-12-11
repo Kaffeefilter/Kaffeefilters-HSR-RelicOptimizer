@@ -1,0 +1,56 @@
+Stat-based Triggers:
+- atk: When the ATK value reaches a certain threshold.
+- def: When the DEF value reaches a certain threshold.
+- hp: When the current HP value reaches a certain threshold.
+- max_hp: Based on the maximum HP value.
+- spd: When the Speed (SPD) value reaches a certain threshold.
+- crit_rate: Based on the Crit Rate value.
+- crit_dmg: Based on the Crit DMG value.
+- effect_hit_rate: When the Effect Hit Rate (EHR) reaches a certain threshold.
+- effect_resistance: Based on the Effect Resistance value.
+- break_effect: Based on the Break Effect value.
+
+Combat Actions and Abilities:
+- on_attack: When an attack is performed.
+- on_skill_use: When a skill ability is used.
+- on_ultimate: When the Ultimate ability is used.
+- on_basic_attack: When a basic attack is used.
+- on_follow_up: When a follow-up attack is performed.
+- on_debuff_inflict: When a debuff is inflicted on a target.
+- on_ally_target: When a skill or Ultimate is used on an ally.
+
+Damage or Status-based Triggers:
+- on_hit: When the wearer is hit.
+- on_critical_hit: When a critical hit is achieved.
+- on_weakness_break: When a weakness is broken.
+- on_dot: When a damage-over-time (DoT) effect is active.
+- on_imprisoned: When the target is in the Imprisoned status.
+- on_debuff: When the target has a debuff.
+- on_shield: When the wearer is shielded.
+
+Elemental Weakness Triggers:
+- on_fire_weakness: When the target has Fire weakness.
+- on_ice_weakness: When the target has Ice weakness.
+- on_lightning_weakness: When the target has Lightning weakness.
+- on_wind_weakness: When the target has Wind weakness.
+- on_quantum_weakness: When the target has Quantum weakness.
+- on_imaginary_weakness: When the target has Imaginary weakness.
+- on_physical_weakness: When the target has Physical weakness.
+
+Combined Triggers:
+- on_attack_or_hit: When either an attack is performed or the wearer is hit.
+
+Turn and Battle Duration:
+- start_of_battle: At the beginning of the battle.
+- start_of_turn: At the beginning of a turn.
+- end_of_turn: At the end of a turn.
+- duration_active: While an effect is active.
+- after_x_turns: After a specific number of turns.
+
+Special Triggers:
+- energy_threshold: Based on the wearer's current energy.
+- on_heal: When healing occurs.
+- on_shield_gain: When a shield is gained.
+- on_buff: When a buff is applied to the wearer.
+- on_damage_received: When damage is received.
+- on_damage_dealt: When damage is dealt.
