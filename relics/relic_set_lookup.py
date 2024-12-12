@@ -464,11 +464,11 @@ CAVERN_RELICS_DETAILS = {
             "description": "When the wearer uses follow-up attacks, increases the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a follow-up attack.",
             "effects": [{
                 "type": "atk",
-                "value_per_stack": 0.06,
+                "stack_value": 0.06,
                 "max_stacks": 8,
                 "duration": 3,
                 "stackable": True,
-                "stack_removal_condition": { 
+                "removal_condition": { 
                     "type": "on_follow_up"  # Stacks are removed on the next follow-up attack
                 },
                 "trigger_condition": {
@@ -574,7 +574,7 @@ CAVERN_RELICS_DETAILS = {
                 "value": 0.30,
                 "duration": 2,
                 "target": "all_allies",
-                "stackable": True,
+                "stackable": False,
                 "trigger_condition": {
                     "type": "on_ultimate",
                     "target": "ally"
@@ -644,7 +644,7 @@ PLANAR_ORNAMENTS_DETAILS = {
                 "duration": "next_attack",
                 "trigger_condition": {
                     "type": "start_of_battle", 
-                    "stat_requirement": {
+                    "stat_requirement": {  # TODO Dont like this
                         "type": "crit_dmg",
                         "comparison": ">=",
                         "threshold": 1.20
@@ -660,7 +660,26 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/46/Item_Duran%27s_Mechabeast_Bridle.png",
         "two_piece_bonus": {
             "description": "When an ally uses follow-up attacks, the wearer gains 1 stack of Merit, stacking up to 5 time(s). Each stack of Merit increases the DMG dealt by the wearer's follow-up attacks by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%.",
-            "effects": [] # TODO 
+            "effects": [{
+                "type": "follow_up_dmg",
+                "name": "Merit",
+                "stackable": True,
+                "stack_value": 0.05,
+                "max_stacks" : 5,
+                "trigger_condition": {
+                    "type": "on_follow_up",
+                    "target": "all_allies"
+                }
+            },{
+                "type": "crit_dmg",
+                "value": 0.25,
+                "trigger_condition": {
+                    "type": "on_buff_stack_count",
+                    "name": "Merit",
+                    "comparison": "==",
+                    "threshold": 5
+                }
+            }]
         }
     },
     "firmament_frontline:_glamoth": {
@@ -670,7 +689,31 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7d/Item_Glamoth%27s_Silent_Tombstone.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
-            "effects": []
+            "effects": [{
+                "type": "atk",
+                "value": 0.12
+            },{
+                "type": "dmg_increase",
+                "value": 0.12,
+                "trigger_condition": {
+                    "type": "spd",
+                    "comparison": ">=",
+                    "value": 135,
+                },
+                "removal_condition": {
+                    "type": "spd",
+                    "comparison": ">=",
+                    "value": 160,
+                }
+            },{
+                "type": "dmg_increase",
+                "value": 0.18,
+                "trigger_condition": {
+                    "type": "spd",
+                    "comparison": ">=",
+                    "value": 160,
+                },
+            }]
         }
     },
     "fleet_of_the_ageless": {
@@ -680,7 +723,19 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/0b/Item_The_Xianzhou_Luofu%27s_Ambrosial_Arbor_Vines.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's Max HP by 12%. When the wearer's SPD reaches 120 or higher, all allies' ATK increases by 8%.",
-            "effects": []
+            "effects": [{
+                "type": "max_hp",
+                "value": 0.12,
+            },{
+                "type": "atk",
+                "value": 0.08,
+                "target": "all_allies",
+                "trigger_condition": {
+                    "type": "spd",
+                    "comparison": ">=",
+                    "value": 120
+                }
+            }]
         }
     },
     "forge_of_the_kalpagni_lantern": {
@@ -690,7 +745,17 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/86/Item_Forge%27s_Heavenly_Flamewheel_Silk.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's SPD by 6%. When the wearer hits an enemy target that has Fire Weakness, the wearer's Break Effect increases by 40%, lasting for 1 turn(s).",
-            "effects": []
+            "effects": [{
+                "type": "max_hp",
+                "value": 0.06,
+            },{
+                "type": "break_effect",
+                "value": 0.40,
+                "duration": 1,
+                "trigger_condition": {
+                    "type": "on_hit_fire_weakness"
+                }
+            }]
         }
     },
     "inert_salsotto": {
@@ -700,7 +765,26 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/cc/Item_Salsotto%27s_Terminator_Line.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the wearer's Ultimate and follow-up attack DMG increases by 15%.",
-            "effects": []
+            "effects": [{
+                "type": "crit_rate",
+                "value": 0.08,
+            },{
+                "type": "ultimate_dmg",
+                "value": 0.15,
+                "trigger_condition": {
+                    "type": "crit_rate",
+                    "comparison": ">=",
+                    "value": 0.5
+                }
+            },{
+                "type": "follow_up_damager",
+                "value": 0.15,
+                "trigger_condition": {
+                    "type": "crit_rate",
+                    "comparison": ">=",
+                    "value": 0.5
+                }
+            }]
         }
     },
     "izumo_gensei_and_takama_divine_realm": {
@@ -710,7 +794,21 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/66/Item_Izumo%27s_Blades_of_Origin_and_End.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's ATK by 12%. When entering battle, if at least one other ally follows the same Path as the wearer, then the wearer's CRIT Rate increases by 12%.",
-            "effects": []
+            "effects": [{
+                "type": "atk",
+                "value": 0.12
+            },{
+                "type": "crit_rate",
+                "value": 0.12,
+                "trigger_condition": {
+                    "type": "on_battle_start",
+                    "requirements": {
+                        "type": "same_path_allies",
+                        "comparison": ">=",
+                        "threshold": 1
+                    }
+                }
+            }]
         }
     },
     "lushaka,_the_sunken_seas": {
@@ -720,7 +818,19 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/eb/Item_Lushaka%27s_Twinlanes.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
-            "effects": []
+            "effects": [{
+                "type": "energy_regeneration_rate",
+                "value": 0.05
+            },{
+                "type": "atk",
+                "value": 0.12,
+                "target": "first_ally",
+                "trigger_condition": {
+                    "type": "position_in_team",
+                    "comparison": "!=",
+                    "threshold": 1
+                }
+            }]
         }
     },
     "pan-cosmic_commercial_enterprise": {

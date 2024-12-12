@@ -41,6 +41,13 @@ Elemental Weakness Triggers:
 - on_quantum_weakness: When the target has Quantum weakness.
 - on_imaginary_weakness: When the target has Imaginary weakness.
 - on_physical_weakness: When the target has Physical weakness.
+- on_hit_fire_weakness: Triggers when the wearer hits an enemy with Fire weakness.
+- on_hit_ice_weakness: Triggers when the wearer hits an enemy with Ice weakness.
+- on_hit_lightning_weakness: Triggers when the wearer hits an enemy with Lightning weakness.
+- on_hit_wind_weakness: Triggers when the wearer hits an enemy with Wind weakness.
+- on_hit_quantum_weakness: Triggers when the wearer hits an enemy with Quantum weakness.
+- on_hit_imaginary_weakness: Triggers when the wearer hits an enemy with Imaginary weakness.
+- on_hit_physical_weakness: Triggers when the wearer hits an enemy with Physical weakness.
 
 Combined Triggers:
 - on_attack_or_hit: When either an attack is performed or the wearer is hit.
@@ -57,5 +64,7 @@ Special Triggers:
 - on_heal: When healing occurs.
 - on_shield_gain: When a shield is gained.
 - on_buff: When a buff is applied to the wearer.
+- on_buff_stack_count: When a buff reaches a certain stack threshold.
 - on_damage_received: When damage is received.
 - on_damage_dealt: When damage is dealt.
+- position_in_team: Triggers when the wearer occupies a specific position in the team formation.
