@@ -840,7 +840,17 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/47/Item_The_IPC%27s_Trade_Route.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's Effect Hit Rate by 10%. Meanwhile, the wearer's ATK increases by an amount that is equal to 25% of the current Effect Hit Rate, up to a maximum of 25%.",
-            "effects": []
+            "effects": [{
+                "type": "effect_hit_rate",
+                "value": 0.10
+            },{
+                "type": "atk",
+                "value_percentage_of_stat": {
+                    "stat": "effect_hit_rate",
+                    "multiplier": 0.25,
+                    "max_value": 0.25
+                }
+            }]
         }
     },
     "penacony,_land_of_the_dreams": {
@@ -850,7 +860,14 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/13/Item_Penacony%27s_Dream-Seeking_Tracks.png",
         "two_piece_bonus": {
             "description": "Increases wearer's Energy Regeneration Rate by 5%. Increases DMG by 10% for all other allies that are of the same Type as the wearer.",
-            "effects": []
+            "effects": [{
+                "type": "energy_regeneration_rate",
+                "value": 0.05
+            },{
+                "type": "crit_dmg",
+                "value": 0.10,
+                "target": "same_type_allies",
+            }]
         }
     },
     "rutilant_arena": {
@@ -860,7 +877,26 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/54/Item_Taikiyan%27s_Arclight_Race_Track.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, the wearer's Basic ATK and Skill DMG increase by 20%.",
-            "effects": []
+            "effects": [{
+                "type": "crit_rate",
+                "value": 0.08
+            },{
+                "type": "basic_atk_dmg",
+                "value": 0.20,
+                "trigger_condition": {
+                    "type": "crit_rate",
+                    "comparison": ">=",
+                    "threshold": 0.70
+                }
+            },{
+                "type": "skill_dmg",
+                "value": 0.20,
+                "trigger_condition": {
+                    "type": "crit_rate",
+                    "comparison": ">=",
+                    "threshold": 0.70
+                }
+            }]
         }
     },
     "sigonia,_the_unclaimed_desolation": {
@@ -870,7 +906,20 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8f/Item_Sigonia%27s_Knot_of_Cyclicality.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's CRIT Rate by 4%. When an enemy target gets defeated, the wearer's CRIT DMG increases by 4%, stacking up to 10 time(s).",
-            "effects": []
+            "effects": [{
+                "type": "crit_rate",
+                "value": 0.04
+            },{
+                "type": "crit_dmg",
+                "stackable": True,
+                "stack_value": 0.04
+                "max_stacks": 10
+                "trigger_condition": {      # TODO ----------------------------------------------------------
+                    "type": "crit_rate",
+                    "comparison": ">=",
+                    "threshold": 0.70
+                }
+            }]
         }
     },
     "space_sealing_station": {
