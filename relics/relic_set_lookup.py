@@ -14,11 +14,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "When the wearer uses their Skill, increases the wearer's ATK by 20% for 1 turn(s).",
             "effects": [{
                 "type": "atk",
-                "value": 0.20,
-                "duration": 1,
-                "trigger_condition": {
-                    "type": "on_skill_use"
-                }
+                "value": 0.20
             }]
         }
     },
@@ -37,13 +33,20 @@ CAVERN_RELICS_DETAILS = {
             "description": "After the wearer attacks or is hit, their ATK increases by 5% for the rest of the battle. This effect can stack up to 5 time(s).",
             "effects": [{
                 "type": "atk",
-                "stackable": True,
-                "stack_value": 0.05,  # 5% pro Stack
-                "max_stacks": 5,     # Maximal 5 Stacks
-                "trigger_condition": {
-                    "type": "on_attack_or_hit"
-                }
-            }]
+                "value": 0.05
+            },{
+                "type": "atk",
+                "value": 0.10
+            },{
+                "type": "atk",
+                "value": 0.15
+            },{
+                "type": "atk",
+                "value": 0.20
+            },{
+                "type": "atk",
+                "value": 0.25
+            },]
         }
     },
     "eagle_of_twilight_line": {
@@ -61,10 +64,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "After the wearer uses their Ultimate, their action is Advanced Forward by 25%.",
             "effects": [{
                 "type": "action_advance",
-                "value": 0.25,
-                "trigger_condition": {
-                    "type": "on_ultimate"
-                }
+                "value": 0.25
             }]
         }
     },
@@ -86,11 +86,7 @@ CAVERN_RELICS_DETAILS = {
                 "value": 0.12
             },{
                 "type": "fire_dmg",
-                "value": 0.12,
-                "duration": "next_attack",
-                "trigger_condition": {
-                    "type": "on_ultimate"
-                }
+                "value": 0.12
             }]
         }
     },
@@ -110,7 +106,7 @@ CAVERN_RELICS_DETAILS = {
             "effects": [{
                 "type": "ignore_def", 
                 "value": 0.10,
-            },{
+            },{ # TODO noch nicht zufrieden
                 "type": "ignore_def",
                 "value": 0.10,
                 "trigger_condition": {
@@ -134,20 +130,10 @@ CAVERN_RELICS_DETAILS = {
             "description": "At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy.",
             "effects": [{
                 "type": "hp",
-                "value": 0.08,
-                "trigger_condition": {
-                    "type": "hp",
-                    "comparison": "<=",
-                    "threshold": 0.5
-                }
+                "value": 0.08
             },{
                 "type": "energy_gain",
-                "value": 5,
-                "trigger_condition": {
-                    "type": "hp",
-                    "comparison": "<=",
-                    "threshold": 0.5
-                }
+                "value": 5
             }]
         }
     },
@@ -166,11 +152,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "After the wearer uses their Ultimate, their CRIT DMG increases by 25% for 2 turn(s).",
             "effects": {
                 "type": "crit_dmg",
-                "value": 0.25,
-                "duration": 2,
-                "trigger_condition": {
-                    "type": "on_ultimate"
-                }
+                "value": 0.25
             }
         }
     },
@@ -240,13 +222,10 @@ CAVERN_RELICS_DETAILS = {
             "description": "When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.",
             "effects": [{
                 "type": "crit_rate",
-                "stackable": True,
-                "stack_value": 0.08,
-                "max_stacks": 2,
-                "duration": 2,
-                "trigger_condition": {
-                    "type": "on_hit_or_hp_consumed"
-                }
+                "stack_value": 0.08
+            },{
+                "type": "crit_rate",
+                "stack_value": 0.16
             }]
         }
     },
@@ -265,13 +244,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.",
             "effects": {
                 "type": "spd",
-                "target": "all_allies",
-                "value": 0.12,
-                "duration": 1,
-                "stackable": False,
-                "trigger_condition": {
-                    "type": "on_ultimate"
-                }
+                "value": 0.12
             }
         }
     },
@@ -310,10 +283,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "At the start of the battle, immediately regenerates 1 Skill Point.",
             "effects": [{
                 "type": "skill_point_gain",
-                "value": 1,
-                "trigger_condition": {
-                    "type": "start_of_battle"
-                }
+                "value": 1
             }]
         }
     },
@@ -334,35 +304,21 @@ CAVERN_RELICS_DETAILS = {
                 "type": "crit_rate",
                 "value": 0.04
             },{
+                "description": "2 debuffs",
                 "type": "crit_dmg",
-                "value": 0.08,
-                "trigger_condition": {
-                    "type": "on_debuff",
-                    "comparison": "==",
-                    "threshold": 2
-                },
-                "enhancement": {
-                    "value_multiplier": 2,
-                    "duration": 1,
-                    "trigger_condition": {
-                        "type": "on_debuff_inflict"
-                    }
-                }
-            }, {
+                "value": 0.08
+            },{
+                "description": "3 debuffs",
                 "type": "crit_dmg",
-                "value": 0.12,
-                "trigger_condition": {
-                    "type": "on_debuff",
-                    "comparison": ">=",
-                    "threshold": 3
-                },
-                "enhancement": {
-                    "value_multiplier": 2,
-                    "duration": 1,
-                    "trigger_condition": {
-                        "type": "on_debuff_inflict"
-                    }
-                }
+                "value": 0.12
+            },{
+                "description": "2 debuffs, enhanced",
+                "type": "crit_dmg",
+                "value": 0.16
+            },{
+                "description": "3 debuffs, enhanced",
+                "type": "crit_dmg",
+                "value": 0.24
             }]
         }
     },
@@ -381,15 +337,13 @@ CAVERN_RELICS_DETAILS = {
             "description": "For every DoT the target enemy is afflicted with, the wearer will ignore 6% of its DEF when dealing DMG to it. This effect is valid for a max of 3 DoTs.",
             "effects": [{
                 "type": "def_ignore",
-                "stackable": True,
-                "stack_value": 0.06,
-                "max_stacks": 3,
-                "trigger_condition": {
-                    "type": "dot_count_on_target",  
-                    "comparison": ">=",
-                    "threshold": 1,
-                    "stacks_from_condition": True,  # Stacks are derived from the number of DoTs
-                }
+                "value": 0.06
+            },{
+                "type": "def_ignore",
+                "value": 0.12
+            },{
+                "type": "def_ignore",
+                "value": 0.18
             }]
         }
     },
@@ -408,15 +362,10 @@ CAVERN_RELICS_DETAILS = {
             "description": "When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
             "effects": [{
                 "type": "crit_dmg",
-                "stackable": True,
-                "stack_value": 0.18,
-                "max_stacks": 2,
-                "duration": 2,
-                "target": "ally",
-                "trigger_condition": {
-                    "type": "on_skill_use_or_ultimate",
-                    "target": "ally"
-                }
+                "stack_value": 0.18
+            },{
+                "type": "crit_dmg",
+                "stack_value": 0.36
             }]
         }
     },
@@ -431,7 +380,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "Increases CRIT Rate by 8%.",
             "effects": {"type": "crit_rate", "value": 0.08}
         },
-        "four_piece_bonus": {
+        "four_piece_bonus": { # TODO
             "description": "Increases DMG dealt by Skill and Ultimate by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
             "effects": [{
                 "type": "skill_dmg",
@@ -464,16 +413,28 @@ CAVERN_RELICS_DETAILS = {
             "description": "When the wearer uses follow-up attacks, increases the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a follow-up attack.",
             "effects": [{
                 "type": "atk",
-                "stack_value": 0.06,
-                "max_stacks": 8,
-                "duration": 3,
-                "stackable": True,
-                "removal_condition": { 
-                    "type": "on_follow_up"  # Stacks are removed on the next follow-up attack
-                },
-                "trigger_condition": {
-                    "type": "on_follow_up_hit",  # Triggered for each hit within a follow-up attack
-                }
+                "value": 0.06
+            },{
+                "type": "atk",
+                "value": 0.12
+            },{
+                "type": "atk",
+                "value": 0.18
+            },{
+                "type": "atk",
+                "value": 0.24
+            },{
+                "type": "atk",
+                "value": 0.30
+            },{
+                "type": "atk",
+                "value": 0.36
+            },{
+                "type": "atk",
+                "value": 0.42
+            },{
+                "type": "atk",
+                "value": 0.48
             }]
         }
     },
@@ -495,11 +456,7 @@ CAVERN_RELICS_DETAILS = {
                 "value": 0.06,
             },{
                 "type": "ultimate_dmg",
-                "value": 0.36,
-                "duration": 1,
-                "trigger_condition": {
-                    "type": "on_follow_up"
-                }
+                "value": 0.36
             }]
         }
     },
@@ -514,7 +471,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "Increases Break Effect by 16%.",
             "effects": {"type": "break_effect", "value": 0.16}
         },
-        "four_piece_bonus": {
+        "four_piece_bonus": { #TODO
             "description": "Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy.",
             "effects": [{
                 "type": "break_effect",
@@ -542,17 +499,13 @@ CAVERN_RELICS_DETAILS = {
         "four_piece_bonus": {
             "description": "When attacking debuffed enemies, the wearer's CRIT Rate increases by 10%, and their CRIT DMG increases by 20% against Imprisoned enemies.",
             "effects": [{
+                "description": "Debuffed",
                 "type": "crit_rate",
-                "value": 0.10,
-                "trigger_condition": {
-                    "type": "on_debuff",
-                }
+                "value": 0.10
             },{
+                "description": "Imprisoned",
                 "type": "crit_damage",
-                "value": 0.20,
-                "trigger_condition": {
-                    "type": "on_imprisoned",
-                }
+                "value": 0.20
             }]
         }
     },
@@ -571,14 +524,7 @@ CAVERN_RELICS_DETAILS = {
             "description": "When the wearer uses their Ultimate on an ally, all allies' Break Effect increases by 30% for 2 turn(s). This effect cannot be stacked.",
             "effects": [{
                 "type": "break_effect",
-                "value": 0.30,
-                "duration": 2,
-                "target": "all_allies",
-                "stackable": False,
-                "trigger_condition": {
-                    "type": "on_ultimate",
-                    "target": "ally"
-                }
+                "value": 0.30
             }]
         }
     }
