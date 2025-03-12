@@ -12,10 +12,9 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer uses their Skill, increases the wearer's ATK by 20% for 1 turn(s).",
-            "effects": [{
-                "type": "atk",
-                "value": 0.20
-            }]
+            "effects": {
+                "0": {"type": "atk", "value": 0.20}
+            }
         }
     },
     "champion_of_streetwise_boxing": {
@@ -31,22 +30,14 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "After the wearer attacks or is hit, their ATK increases by 5% for the rest of the battle. This effect can stack up to 5 time(s).",
-            "effects": [{
-                "type": "atk",
-                "value": 0.05
-            },{
-                "type": "atk",
-                "value": 0.10
-            },{
-                "type": "atk",
-                "value": 0.15
-            },{
-                "type": "atk",
-                "value": 0.20
-            },{
-                "type": "atk",
-                "value": 0.25
-            },]
+            "effects": {
+                "0": { "type": "atk", "value": 0.00 },
+                "1": { "type": "atk", "value": 0.05 },
+                "2": { "type": "atk", "value": 0.10 },
+                "3": { "type": "atk", "value": 0.15 },
+                "4": { "type": "atk", "value": 0.20 },
+                "5": { "type": "atk", "value": 0.25 },
+            }
         }
     },
     "eagle_of_twilight_line": {
@@ -62,10 +53,9 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "After the wearer uses their Ultimate, their action is Advanced Forward by 25%.",
-            "effects": [{
-                "type": "action_advance",
-                "value": 0.25
-            }]
+            "effects": {
+                "0": {"type": "action_advance", "value": 0.25}
+            }
         }
     },
     "firesmith_of_lava-forging": {
@@ -81,13 +71,10 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "Increases the wearer's Skill DMG by 12%. After unleashing Ultimate, increases the wearer's Fire DMG by 12% for the next attack.",
-            "effects": [{
-                "type": "skill_dmg", 
-                "value": 0.12
-            },{
-                "type": "fire_dmg",
-                "value": 0.12
-            }]
+            "effects": {
+                "default": {"type": "skill_dmg", "value": 0.12},
+                "0": {"type": "fire_dmg", "value": 0.12}
+            }
         }
     },
     "genius_of_brilliant_stars": {
@@ -103,16 +90,10 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
-            "effects": [{
-                "type": "ignore_def", 
-                "value": 0.10,
-            },{ # TODO noch nicht zufrieden
-                "type": "ignore_def",
-                "value": 0.10,
-                "trigger_condition": {
-                    "type": "on_quantum_weakness"
-                }
-            }]
+            "effects": {
+                "default": {"type": "ignore_def", "value": 0.10},
+                "0": {"type": "ignore_def", "value": 0.10}
+            }
         }
     },
     "guard_of_wuthering_snow": {
@@ -128,13 +109,9 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy.",
-            "effects": [{
-                "type": "hp",
-                "value": 0.08
-            },{
-                "type": "energy_gain",
-                "value": 5
-            }]
+            "effects": {
+                "default": [{"type": "hp", "value": 0.08},{"type": "energy_gain", "value": 5}]
+            }
         }
     },
     "hunter_of_glacial_forest": {
@@ -151,8 +128,7 @@ CAVERN_RELICS_DETAILS = {
         "four_piece_bonus": {
             "description": "After the wearer uses their Ultimate, their CRIT DMG increases by 25% for 2 turn(s).",
             "effects": {
-                "type": "crit_dmg",
-                "value": 0.25
+                "0": {"type": "crit_dmg", "value": 0.25}
             }
         }
     },
@@ -169,23 +145,19 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "If the wearer's Break Effect is 150% or higher, the Break DMG dealt to the enemy target ignores 10% of their DEF. If the wearer's Break Effect is 250% or higher, the Super Break DMG dealt to the enemy target additionally ignores 15% of their DEF.",
-            "effects": [{
-                "type": "break_dmg_ignore_def",
-                "value": 0.10,
-                "trigger_condition": {
-                    "type": "break_effect",
-                    "comparison": ">=",
+            "effects": {
+                "auto": [{
+                    "type": "break_dmg_ignore_def",
+                    "value": 0.10,
+                    "conditiontype": "break_effect",
                     "threshold": 1.5
-                }
-            },{
-                "type": "super_break_dmg_ignore_def",   # super break buffs = normal break buffs + super break buffs
-                "value": 0.15,
-                "trigger_condition": {
-                    "type": "break_effect",
-                    "comparison": ">=",
+                },{
+                    "type": "super_break_dmg_ignore_def",   # super break buffs = normal break buffs + super break buffs
+                    "value": 0.15,
+                    "conditiontype": "break_effect",
                     "threshold": 2.5
-                }
-            }]
+                }]
+            }
         }
     },
     "knight_of_purity_palace": {
@@ -201,10 +173,9 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.",
-            "effects": [{
-                "type": "shield_strength",
-                "value": 0.20
-            }]
+            "effects": {
+                "default": {"type": "shield_strength", "value": 0.20}
+            }
         }
     },
     "longevous_disciple": {
@@ -220,13 +191,11 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.",
-            "effects": [{
-                "type": "crit_rate",
-                "stack_value": 0.08
-            },{
-                "type": "crit_rate",
-                "stack_value": 0.16
-            }]
+            "effects": {
+                "0": {"type": "crit_rate", "stack_value": 0.00},
+                "1": {"type": "crit_rate", "stack_value": 0.08},
+                "2": {"type": "crit_rate", "stack_value": 0.16}
+            }
         }
     },
     "messenger_traversing_hackerspace": {
@@ -243,8 +212,7 @@ CAVERN_RELICS_DETAILS = {
         "four_piece_bonus": {
             "description": "When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.",
             "effects": {
-                "type": "spd",
-                "value": 0.12
+                "0": {"type": "spd", "value": 0.12}
             }
         }
     },
@@ -261,14 +229,12 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%.",
-            "effects": {[
-                {"type": "spd", "value": 0.06}
-            ],[
-                {"type": "basic_atk_dmg", "value": 0.10}
-            ]}
+            "effects": {
+                "default": [{"type": "spd", "value": 0.06},{"type": "basic_atk_dmg", "value": 0.10}],
+            }
         }
     },
-    "passerby_of_wandering_cloud": {
+    "passerby_of_wandering_cloud": { # todo here
         "name": "Passerby of Wandering Cloud",
         "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/aa/Item_Passerby_of_Wandering_Cloud.png",
         "head_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/00/Item_Passerby%27s_Rejuvenated_Wooden_Hairstick.png",
@@ -564,13 +530,7 @@ PLANAR_ORNAMENTS_DETAILS = {
                 "value": 0.10,
             },{
                 "type": "crit_dmg",
-                "value": 0.10,
-                "target": "all_allies",
-                "trigger_condition": {
-                    "type": "effect_resistance",
-                    "comparison": ">=",
-                    "threshold": 0.30
-                }
+                "value": 0.10
             }]
         }
     },
@@ -587,15 +547,7 @@ PLANAR_ORNAMENTS_DETAILS = {
             },{
                 "type": "crit_rate",
                 "value": 0.60,
-                "duration": "next_attack",
-                "trigger_condition": {
-                    "type": "start_of_battle", 
-                    "stat_requirement": {  # TODO Dont like this
-                        "type": "crit_dmg",
-                        "comparison": ">=",
-                        "threshold": 1.20
-                    }
-                }
+                "duration": "next_attack"
             }]
         }
     },
