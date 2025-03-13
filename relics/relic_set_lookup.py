@@ -234,7 +234,7 @@ CAVERN_RELICS_DETAILS = {
             }
         }
     },
-    "passerby_of_wandering_cloud": { # todo here
+    "passerby_of_wandering_cloud": {
         "name": "Passerby of Wandering Cloud",
         "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/aa/Item_Passerby_of_Wandering_Cloud.png",
         "head_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/00/Item_Passerby%27s_Rejuvenated_Wooden_Hairstick.png",
@@ -247,10 +247,9 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "At the start of the battle, immediately regenerates 1 Skill Point.",
-            "effects": [{
-                "type": "skill_point_gain",
-                "value": 1
-            }]
+            "effects": {
+                "default": {"type": "skill_point_gain", "value": 1}
+            }
         }
     },
     "pioneer_diver_of_dead_waters": {
@@ -266,26 +265,14 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).",
-            "effects": [{
-                "type": "crit_rate",
-                "value": 0.04
-            },{
-                "description": "2 debuffs",
-                "type": "crit_dmg",
-                "value": 0.08
-            },{
-                "description": "3 debuffs",
-                "type": "crit_dmg",
-                "value": 0.12
-            },{
-                "description": "2 debuffs, enhanced",
-                "type": "crit_dmg",
-                "value": 0.16
-            },{
-                "description": "3 debuffs, enhanced",
-                "type": "crit_dmg",
-                "value": 0.24
-            }]
+            "effects": {
+                "default": {"type": "crit_rate", "value": 0.04},
+                "0": {"description": "0 debuffs", "type": "crit_dmg", "value": 0.00},
+                "1": {"description": "2 debuffs", "type": "crit_dmg", "value": 0.08},
+                "2": {"description": "3 debuffs", "type": "crit_dmg", "value": 0.12},
+                "3": {"description": "2 debuffs, enhanced", "type": "crit_dmg", "value": 0.16},
+                "4": {"description": "3 debuffs, enhanced", "type": "crit_dmg", "value": 0.24}
+            }
         }
     },
     "prisoner_in_deep_confinement": {
@@ -301,16 +288,12 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": { 
             "description": "For every DoT the target enemy is afflicted with, the wearer will ignore 6% of its DEF when dealing DMG to it. This effect is valid for a max of 3 DoTs.",
-            "effects": [{
-                "type": "def_ignore",
-                "value": 0.06
-            },{
-                "type": "def_ignore",
-                "value": 0.12
-            },{
-                "type": "def_ignore",
-                "value": 0.18
-            }]
+            "effects": {
+                "0": {"type": "def_ignore", "value": 0.00},
+                "1": {"type": "def_ignore", "value": 0.06},
+                "2": {"type": "def_ignore", "value": 0.12},
+                "3": {"type": "def_ignore", "value": 0.18}
+            }
         }
     },
     "sacerdos'_relived_ordeal": {
@@ -326,13 +309,11 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
-            "effects": [{
-                "type": "crit_dmg",
-                "stack_value": 0.18
-            },{
-                "type": "crit_dmg",
-                "stack_value": 0.36
-            }]
+            "effects": {
+                "0": {"type": "crit_dmg", "stack_value": 0.00},
+                "1": {"type": "crit_dmg", "stack_value": 0.18},
+                "2": {"type": "crit_dmg", "stack_value": 0.36}
+            }
         }
     },
     "scholar_lost_in_erudition": {
@@ -346,22 +327,15 @@ CAVERN_RELICS_DETAILS = {
             "description": "Increases CRIT Rate by 8%.",
             "effects": {"type": "crit_rate", "value": 0.08}
         },
-        "four_piece_bonus": { # TODO
+        "four_piece_bonus": {
             "description": "Increases DMG dealt by Skill and Ultimate by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
-            "effects": [{
-                "type": "skill_dmg",
-                "value": 0.20
-            },{
-                "type": "ultimate_dmg",
-                "value": 0.20
-            },{
-                "type": "skill_dmg",
-                "value": 0.25,
-                "duration": "next_skill_use",
-                "trigger_condition": {
-                    "type": "on_ultimate"
-                }
-            }]
+            "effects": {
+                "default": [
+                    {"type": "skill_dmg", "value": 0.20},
+                    {"type": "ultimate_dmg", "value": 0.20}
+                ],
+                "0": {"type": "skill_dmg", "value": 0.25}
+            }
         }
     },
     "the_ashblazing_grand_duke": {
@@ -377,31 +351,17 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer uses follow-up attacks, increases the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a follow-up attack.",
-            "effects": [{
-                "type": "atk",
-                "value": 0.06
-            },{
-                "type": "atk",
-                "value": 0.12
-            },{
-                "type": "atk",
-                "value": 0.18
-            },{
-                "type": "atk",
-                "value": 0.24
-            },{
-                "type": "atk",
-                "value": 0.30
-            },{
-                "type": "atk",
-                "value": 0.36
-            },{
-                "type": "atk",
-                "value": 0.42
-            },{
-                "type": "atk",
-                "value": 0.48
-            }]
+            "effects": {
+                "0": {"type": "atk","value": 0.00},
+                "1": {"type": "atk","value": 0.06},
+                "2": {"type": "atk","value": 0.12},
+                "3": {"type": "atk","value": 0.18},
+                "4": {"type": "atk","value": 0.24},
+                "5": {"type": "atk","value": 0.30},
+                "6": {"type": "atk","value": 0.36},
+                "7": {"type": "atk","value": 0.42},
+                "8": {"type": "atk","value": 0.48},
+            }
         }
     },
     "the_wind-soaring_valorous": {
@@ -417,13 +377,10 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "Increases the wearer's CRIT Rate by 6%. When the wearer uses a follow-up attack, increases the DMG dealt by Ultimate by 36%, lasting for 1 turn(s).",
-            "effects": [{
-                "type": "crit_rate",
-                "value": 0.06,
-            },{
-                "type": "ultimate_dmg",
-                "value": 0.36
-            }]
+            "effects": {
+                "default": {"type": "crit_rate", "value": 0.06},
+                "0": {"type": "ultimate_dmg", "value": 0.36}
+            }
         }
     },
     "thief_of_shooting_meteor": {
@@ -437,18 +394,12 @@ CAVERN_RELICS_DETAILS = {
             "description": "Increases Break Effect by 16%.",
             "effects": {"type": "break_effect", "value": 0.16}
         },
-        "four_piece_bonus": { #TODO
+        "four_piece_bonus": {
             "description": "Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy.",
-            "effects": [{
-                "type": "break_effect",
-                "value": 0.16
-            },{
-                "type": "energy_gain",
-                "value": 3,
-                "trigger_condition": {
-                    "type": "on_weakness_break"
-                }
-            }]
+            "effects": {
+                "default": {"type": "break_effect", "value": 0.16},
+                "auto": { "type": "energy_gain", "value": 3, "conditiontype": "on_weakness_break"}
+            }
         }
     },
     "wastelander_of_banditry_desert": {
@@ -464,15 +415,11 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When attacking debuffed enemies, the wearer's CRIT Rate increases by 10%, and their CRIT DMG increases by 20% against Imprisoned enemies.",
-            "effects": [{
-                "description": "Debuffed",
-                "type": "crit_rate",
-                "value": 0.10
-            },{
-                "description": "Imprisoned",
-                "type": "crit_damage",
-                "value": 0.20
-            }]
+            "effects": {
+                "0": {"description": "Not Debuffed"},
+                "1": {"description": "Debuffed", "type": "crit_rate", "value": 0.10},
+                "2": {"description": "Imprisoned", "effects": [{"type": "crit_rate", "value": 0.10}, {"type": "crit_damage", "value": 0.20}]}
+            }
         }
     },
     "watchmaker,_master_of_dream_machinations": {
@@ -488,10 +435,9 @@ CAVERN_RELICS_DETAILS = {
         },
         "four_piece_bonus": {
             "description": "When the wearer uses their Ultimate on an ally, all allies' Break Effect increases by 30% for 2 turn(s). This effect cannot be stacked.",
-            "effects": [{
-                "type": "break_effect",
-                "value": 0.30
-            }]
+            "effects": {
+                "0": {"type": "break_effect", "value": 0.30}
+            }
         }
     }
 }
