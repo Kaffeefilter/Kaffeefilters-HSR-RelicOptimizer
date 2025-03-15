@@ -110,7 +110,27 @@ CAVERN_RELICS_DETAILS = {
         "four_piece_bonus": {
             "description": "At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy.",
             "effects": {
-                "default": [{"type": "hp", "value": 0.08},{"type": "energy_gain", "value": 5}]
+                "default": [{"type": "hp", "value": 0.08},
+                            {"type": "energy_gain", "value": 5}]
+            }
+        }
+    },
+    "hero_of_triumphant_song": {
+        "name": "Hero of Triumphant Song",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b4/Item_Hero_of_Triumphant_Song.png",
+        "head_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/47/Item_Hero%27s_Wreath_of_Championship.png",
+        "hands_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/1d/Item_Hero%27s_Gilded_Bracers.png",
+        "body_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/9d/Item_Hero%27s_Gallant_Golden_Armor.png",
+        "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/a3/Item_Hero%27s_Firechasing_Shinguard.png",
+        "two_piece_bonus": {
+            "description": "Increases ATK by 12%.",
+            "effects": {"type": "atk", "value": 0.12}
+        },
+        "four_piece_bonus": {
+            "description": "While the wearer's memosprite is on the field, increases the wearer's SPD by 6%. When the wearer's memosprite attacks, increases the wearer's and memosprite's CRIT DMG by 30%, lasting for 2 turn(s).",
+            "effects": {
+                "0": [{"type": "spd", "value": 0.06},
+                      {"type": "crit_dmg", "value": 0.30}]
             }
         }
     },
@@ -272,6 +292,37 @@ CAVERN_RELICS_DETAILS = {
                 "2": {"description": "3 debuffs", "type": "crit_dmg", "value": 0.12},
                 "3": {"description": "2 debuffs, enhanced", "type": "crit_dmg", "value": 0.16},
                 "4": {"description": "3 debuffs, enhanced", "type": "crit_dmg", "value": 0.24}
+            }
+        }
+    },
+    "poet_of_mourning_collapse": {
+        "name": "Poet of Mourning Collapse",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8d/Item_Poet_of_Mourning_Collapse.png",
+        "head_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/10/Item_Poet%27s_Dill_Wreath.png",
+        "hands_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8e/Item_Poet%27s_Gilded_Bracelet.png",
+        "body_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b7/Item_Poet%27s_Star-Studded_Skirt.png",
+        "feet_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/5b/Item_Poet%27s_Silver-Studded_Shoes.png",
+        "two_piece_bonus": {
+            "description": "Increases Quantum DMG by 10%.",
+            "effects": {"type": "quantum_dmg", "value": 0.10}
+        },
+        "four_piece_bonus": {
+            "description": "Decreases the wearer's SPD by 8%. Before entering battle, if the wearer's SPD is lower than 110/95, increases the wearer's CRIT Rate by 20%/32%. This effect applies to the wearer's memosprite at the same time.",
+            "effects": {
+                "default": {"type": "spd", "value": -0.08},
+                "auto": [{
+                    "type": "crit_rate",
+                    "value": 0.20,
+                    "conditiontype": "spd",
+                    "threshold": 110,
+                    "less_than": True
+                },{
+                    "type": "crit_rate",
+                    "value": 0.12,  # 20% + 12% = 32%
+                    "conditiontype": "spd",
+                    "threshold": 95,
+                    "less_than": True
+                }]
             }
         }
     },
@@ -461,6 +512,24 @@ PLANAR_ORNAMENTS_DETAILS = {
             }
         }
     },
+    "bone_collection's_serene_demesne": {
+        "name": "Bone Collection's Serene Demesne",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/c3/Item_Bone_Collection%27s_Serene_Demesne.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/56/Item_Aidonia%27s_Deceased_Gravestones.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d1/Item_Aidonia%27s_Deathward_Bone_Chains.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%.",
+            "effects": {
+                "default": {"type": "max_hp", "value": 0.12},
+                "auto": {
+                    "type": "crit_dmg",
+                    "value": 0.28,
+                    "conditiontype": "max_hp",
+                    "threshold": 5000
+                }
+            }
+        }
+    },
     "broken_keel": {
         "name": "Broken Keel",
         "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/00/Item_Broken_Keel.png",
@@ -565,6 +634,29 @@ PLANAR_ORNAMENTS_DETAILS = {
             "effects": {
                 "default": {"type": "max_hp", "value": 0.06},
                 "0": {"type": "break_effect", "value": 0.40}
+            }
+        }
+    },
+    "giant_tree_of_rapt_brooding": {
+        "name": "Giant Tree of Rapt Brooding",
+        "set_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e3/Item_Giant_Tree_of_Rapt_Brooding.png",
+        "planar_sphere_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/ad/Item_Grove_of_Epiphany%27s_Pondering_Colossus.png",
+        "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/9b/Item_Grove_of_Epiphany%27s_Interwoven_Veins.png",
+        "two_piece_bonus": {
+            "description": "Increases the wearer's SPD by 6%. When the wearer's Speed is 135/180 or higher, increases the wearer and their memosprite's Outgoing Healing by 12%/20%.",
+            "effects": {
+                "default": {"type": "spd", "value": 0.06},
+                "auto": [{
+                    "type": "outgoing_healing",
+                    "value": 0.12,
+                    "conditiontype": "spd",
+                    "threshold": 135,
+                },{
+                    "type": "outgoing_healing",
+                    "value": 0.08,  # 12% + 8% = 20%
+                    "conditiontype": "spd",
+                    "threshold": 180,
+                }]
             }
         }
     },
