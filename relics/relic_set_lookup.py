@@ -628,8 +628,11 @@ PLANAR_ORNAMENTS_DETAILS = {
                 "default": {"type": "effect_hit_rate", "value": 0.10},
                 "dynamic": {
                     "type": "atk",
-                    ################
-            }}
+                    "from": "effect_hit_rate",
+                    "ratio": 0.25,
+                    "max": 1.00     # 100 EHR for the max 25% ATK
+                }
+            }
         }
     },
     "penacony,_land_of_the_dreams": {
@@ -639,14 +642,10 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/13/Item_Penacony%27s_Dream-Seeking_Tracks.png",
         "two_piece_bonus": {
             "description": "Increases wearer's Energy Regeneration Rate by 5%. Increases DMG by 10% for all other allies that are of the same Type as the wearer.",
-            "effects": [{
-                "type": "energy_regeneration_rate",
-                "value": 0.05
-            },{
-                "type": "crit_dmg",
-                "value": 0.10,
-                "target": "same_type_allies",
-            }]
+            "effects": {
+                "default": {"type": "energy_regeneration_rate", "value": 0.05},
+                "0": {"type": "crit_dmg", "value": 0.10}
+            }
         }
     },
     "rutilant_arena": {
@@ -656,26 +655,20 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/54/Item_Taikiyan%27s_Arclight_Race_Track.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, the wearer's Basic ATK and Skill DMG increase by 20%.",
-            "effects": [{
-                "type": "crit_rate",
-                "value": 0.08
-            },{
-                "type": "basic_atk_dmg",
-                "value": 0.20,
-                "trigger_condition": {
-                    "type": "crit_rate",
-                    "comparison": ">=",
+            "effects": {
+                "default": {"type": "crit_rate", "value": 0.08},
+                "auto": [{
+                    "type": "basic_atk_dmg",
+                    "value": 0.20,
+                    "conditiontype": "crit_rate",
                     "threshold": 0.70
-                }
-            },{
-                "type": "skill_dmg",
-                "value": 0.20,
-                "trigger_condition": {
-                    "type": "crit_rate",
-                    "comparison": ">=",
+                },{
+                    "type": "skill_dmg",
+                    "value": 0.20,
+                    "conditiontype": "crit_rate",
                     "threshold": 0.70
-                }
-            }]
+                }]
+            }
         }
     },
     "sigonia,_the_unclaimed_desolation": {
@@ -685,20 +678,20 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8f/Item_Sigonia%27s_Knot_of_Cyclicality.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's CRIT Rate by 4%. When an enemy target gets defeated, the wearer's CRIT DMG increases by 4%, stacking up to 10 time(s).",
-            "effects": [{
-                "type": "crit_rate",
-                "value": 0.04
-            },{
-                "type": "crit_dmg",
-                "stackable": True,
-                "stack_value": 0.04
-                "max_stacks": 10
-                "trigger_condition": {      # TODO ----------------------------------------------------------
-                    "type": "crit_rate",
-                    "comparison": ">=",
-                    "threshold": 0.70
-                }
-            }]
+            "effects": {
+                "default": {"type": "crit_rate", "value": 0.04},
+                "0": {"type": "crit_dmg", "value": 0.00},
+                "1": {"type": "crit_dmg", "value": 0.04},
+                "2": {"type": "crit_dmg", "value": 0.08},
+                "3": {"type": "crit_dmg", "value": 0.12},
+                "4": {"type": "crit_dmg", "value": 0.16},
+                "5": {"type": "crit_dmg", "value": 0.20},
+                "6": {"type": "crit_dmg", "value": 0.24},
+                "7": {"type": "crit_dmg", "value": 0.28},
+                "8": {"type": "crit_dmg", "value": 0.32},
+                "9": {"type": "crit_dmg", "value": 0.36},
+                "10": {"type": "crit_dmg", "value": 0.40}
+            }
         }
     },
     "space_sealing_station": {
@@ -708,7 +701,15 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/da/Item_Herta%27s_Wandering_Trek.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's ATK by 12%. When the wearer's SPD reaches 120 or higher, the wearer's ATK increases by an extra 12%.",
-            "effects": []
+            "effects": {
+                "default": {"type": "atk", "value": 0.12},
+                "auto": {
+                    "type": "atk",
+                    "value": 0.12,
+                    "conditiontype": "spd",
+                    "threshold": 120
+                }
+            }
         }
     },
     "sprightly_vonwacq": {
@@ -718,7 +719,15 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/f1/Item_Vonwacq%27s_Islandic_Coast.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
-            "effects": []
+            "effects": {
+                "default": {"type": "energy_regeneration_rate", "value": 0.05},
+                "auto": {
+                    "type": "action_advance",
+                    "value": 0.40,
+                    "conditiontype": "spd",
+                    "threshold": 120
+                }
+            }
         }
     },
     "talia:_kingdom_of_banditry": {
@@ -728,7 +737,15 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fc/Item_Talia%27s_Exposed_Electric_Wire.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's Break Effect by 16%. When the wearer's SPD reaches 145 or higher, the wearer's Break Effect increases by an extra 20%.",
-            "effects": []
+            "effects": {
+                "default": {"type": "break_effect", "value": 0.16},
+                "auto": {
+                    "type": "break_effect",
+                    "value": 0.20,
+                    "conditiontype": "spd",
+                    "threshold": 145
+                }
+            }
         }
     },
     "the_wondrous_bananamusement_park": {
@@ -738,7 +755,10 @@ PLANAR_ORNAMENTS_DETAILS = {
         "link_rope_icon_url": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8e/Item_BananAmusement_Park%27s_BananAxis_Plaza.png",
         "two_piece_bonus": {
             "description": "Increases the wearer's CRIT DMG by 16%. When a target summoned by the wearer is on the field, CRIT DMG additionally increases by 32%.",
-            "effects": []
+            "effects": {
+                "default": {"type": "crit_dmg", "value": 0.16},
+                "0": {"type": "crit_dmg", "value": 0.32}
+            }
         }
     }
 }
