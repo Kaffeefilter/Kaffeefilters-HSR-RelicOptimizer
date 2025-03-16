@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Band of Sizzling Thunder",
+    "bonuses": "2 Piece: Increases Lightning DMG by 10%.\n4 Piece: When the wearer uses their Skill, increases the wearer's ATK by 20% for 1 turn(s).",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/6e/Item_Band_of_Sizzling_Thunder.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b6/Item_Band%27s_Polarized_Sunglasses.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7d/Item_Band%27s_Touring_Bracelet.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b9/Item_Band%27s_Leather_Jacket_With_Studs.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/ae/Item_Band%27s_Ankle_Boots_With_Rivets.png"
+  },
+  {
+    "name": "Champion of Streetwise Boxing",
+    "bonuses": "2 Piece: Increases Physical DMG by 10%.\n4 Piece: After the wearer attacks or is hit, their ATK increases by 5% for the rest of the battle. This effect can stack up to 5 time(s).",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b9/Item_Champion_of_Streetwise_Boxing.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/ee/Item_Champion%27s_Headgear.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/6d/Item_Champion%27s_Heavy_Gloves.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/3a/Item_Champion%27s_Chest_Guard.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/77/Item_Champion%27s_Fleetfoot_Boots.png"
+  },
+  {
+    "name": "Eagle of Twilight Line",
+    "bonuses": "2 Piece: Increases Wind DMG by 10%.\n4 Piece: After the wearer uses their Ultimate, their action is Advanced Forward by 25%.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/3f/Item_Eagle_of_Twilight_Line.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/13/Item_Eagle%27s_Beaked_Helmet.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/9b/Item_Eagle%27s_Soaring_Ring.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/9f/Item_Eagle%27s_Winged_Suit_Harness.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fd/Item_Eagle%27s_Quilted_Puttees.png"
+  },
+  {
+    "name": "Firesmith of Lava-Forging",
+    "bonuses": "2 Piece: Increases Fire DMG by 10%.\n4 Piece: Increases the wearer's Skill DMG by 12%. After unleashing Ultimate, increases the wearer's Fire DMG by 12% for the next attack.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/96/Item_Firesmith_of_Lava-Forging.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/c3/Item_Firesmith%27s_Obsidian_Goggles.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/5d/Item_Firesmith%27s_Ring_of_Flame-Mastery.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/be/Item_Firesmith%27s_Fireproof_Apron.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/6c/Item_Firesmith%27s_Alloy_Leg.png"
+  },
+  {
+    "name": "Genius of Brilliant Stars",
+    "bonuses": "2 Piece: Increases Quantum DMG by 10%.\n4 Piece: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/aa/Item_Genius_of_Brilliant_Stars.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/ef/Item_Genius%27s_Ultraremote_Sensing_Visor.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/18/Item_Genius%27s_Frequency_Catcher.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/5c/Item_Genius%27s_Metafield_Suit.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/59/Item_Genius%27s_Gravity_Walker.png"
+  },
+  {
+    "name": "Guard of Wuthering Snow",
+    "bonuses": "2 Piece: Reduces DMG taken by 8%.\n4 Piece: At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d8/Item_Guard_of_Wuthering_Snow.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d6/Item_Guard%27s_Cast_Iron_Helmet.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/69/Item_Guard%27s_Shining_Gauntlets.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/f3/Item_Guard%27s_Uniform_of_Old.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/59/Item_Guard%27s_Silver_Greaves.png"
+  },
+  {
+    "name": "Hunter of Glacial Forest",
+    "bonuses": "2 Piece: Increases Ice DMG by 10%.\n4 Piece: After the wearer uses their Ultimate, their CRIT DMG increases by 25% for 2 turn(s).",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e8/Item_Hunter_of_Glacial_Forest.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e2/Item_Hunter%27s_Artaius_Hood.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/c4/Item_Hunter%27s_Lizard_Gloves.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/57/Item_Hunter%27s_Ice_Dragon_Cloak.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e6/Item_Hunter%27s_Soft_Elkskin_Boots.png"
+  },
+  {
+    "name": "Iron Cavalry Against the Scourge",
+    "bonuses": "2 Piece: Increases Break Effect by 16%.\n4 Piece: If the wearer's Break Effect is 150% or higher, the Break DMG dealt to the enemy target ignores 10% of their DEF. If the wearer's Break Effect is 250% or higher, the Super Break DMG dealt to the enemy target additionally ignores 15% of their DEF.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/49/Item_Iron_Cavalry_Against_the_Scourge.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/0d/Item_Iron_Cavalry%27s_Homing_Helm.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/11/Item_Iron_Cavalry%27s_Crushing_Wristguard.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d8/Item_Iron_Cavalry%27s_Silvery_Armor.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/40/Item_Iron_Cavalry%27s_Skywalk_Greaves.png"
+  },
+  {
+    "name": "Knight of Purity Palace",
+    "bonuses": "2 Piece: Increases DEF by 15%.\n4 Piece: Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/1f/Item_Knight_of_Purity_Palace.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7c/Item_Knight%27s_Forgiving_Casque.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/91/Item_Knight%27s_Silent_Oath_Ring.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/4a/Item_Knight%27s_Solemn_Breastplate.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/ea/Item_Knight%27s_Iron_Boots_of_Order.png"
+  },
+  {
+    "name": "Longevous Disciple",
+    "bonuses": "2 Piece: Increases Max HP by 12%.\n4 Piece: When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/4a/Item_Longevous_Disciple.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/4b/Item_Disciple%27s_Prosthetic_Eye.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/37/Item_Disciple%27s_Ingenium_Hand.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b3/Item_Disciple%27s_Dewy_Feather_Garb.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7f/Item_Disciple%27s_Celestial_Silk_Sandals.png"
+  },
+  {
+    "name": "Messenger Traversing Hackerspace",
+    "bonuses": "2 Piece: Increases SPD by 6%.\n4 Piece: When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/ac/Item_Messenger_Traversing_Hackerspace.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e4/Item_Messenger%27s_Holovisor.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/a5/Item_Messenger%27s_Transformative_Arm.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7d/Item_Messenger%27s_Secret_Satchel.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/be/Item_Messenger%27s_Par-kool_Sneakers.png"
+  },
+  {
+    "name": "Musketeer of Wild Wheat",
+    "bonuses": "2 Piece: ATK increases by 12%.\n4 Piece: The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fc/Item_Musketeer_of_Wild_Wheat.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7a/Item_Musketeer%27s_Wild_Wheat_Felt_Hat.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/83/Item_Musketeer%27s_Coarse_Leather_Gloves.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e8/Item_Musketeer%27s_Wind-Hunting_Shawl.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/bf/Item_Musketeer%27s_Rivets_Riding_Boots.png"
+  },
+  {
+    "name": "Passerby of Wandering Cloud",
+    "bonuses": "2 Piece: Increases Outgoing Healing by 10%.\n4 Piece: At the start of the battle, immediately regenerates 1 Skill Point.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/aa/Item_Passerby_of_Wandering_Cloud.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/00/Item_Passerby%27s_Rejuvenated_Wooden_Hairstick.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7c/Item_Passerby%27s_Roaming_Dragon_Bracer.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/78/Item_Passerby%27s_Ragged_Embroided_Coat.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/7d/Item_Passerby%27s_Stygian_Hiking_Boots.png"
+  },
+  {
+    "name": "Pioneer Diver of Dead Waters",
+    "bonuses": "2 Piece: Increases DMG dealt to enemies with debuffs by 12%.\n4 Piece: Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/86/Item_Pioneer_Diver_of_Dead_Waters.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/16/Item_Pioneer%27s_Heatproof_Shell.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/48/Item_Pioneer%27s_Lacuna_Compass.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/50/Item_Pioneer%27s_Sealed_Lead_Apron.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/03/Item_Pioneer%27s_Starfaring_Anchor.png"
+  },
+  {
+    "name": "Prisoner in Deep Confinement",
+    "bonuses": "2 Piece: ATK increases by 12%.\n4 Piece: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of its DEF when dealing DMG to it. This effect is valid for a max of 3 DoTs.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b3/Item_Prisoner_in_Deep_Confinement.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/54/Item_Prisoner%27s_Sealed_Muzzle.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/55/Item_Prisoner%27s_Leadstone_Shackles.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/0b/Item_Prisoner%27s_Repressive_Straitjacket.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/2/2e/Item_Prisoner%27s_Restrictive_Fetters.png"
+  },
+  {
+    "name": "Sacerdos' Relived Ordeal",
+    "bonuses": "2 Piece: Increases SPD by 6%.\n4 Piece: When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/63/Item_Sacerdos%27_Relived_Ordeal.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/82/Item_Sacerdos%27_Melodic_Earrings.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8f/Item_Sacerdos%27_Welcoming_Gloves.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/74/Item_Sacerdos%27_Ceremonial_Garb.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/6e/Item_Sacerdos%27_Arduous_Boots.png"
+  },
+  {
+    "name": "Scholar Lost in Erudition",
+    "bonuses": "2 Piece: Increases CRIT Rate by 8%.\n4 Piece: Increases DMG dealt by Skill and Ultimate by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fc/Item_Scholar_Lost_in_Erudition.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/6d/Item_Scholar%27s_Silver-Rimmed_Monocle.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/91/Item_Scholar%27s_Auxiliary_Knuckle.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/8d/Item_Scholar%27s_Tweed_Jacket.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fa/Item_Scholar%27s_Felt_Snowboots.png"
+  },
+  {
+    "name": "The Ashblazing Grand Duke",
+    "bonuses": "2 Piece: Increases the DMG dealt by follow-up attacks by 20%.\n4 Piece: When the wearer uses follow-up attacks, increases the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a follow-up attack.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/36/Item_The_Ashblazing_Grand_Duke.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/86/Item_Grand_Duke%27s_Crown_of_Netherflame.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/f7/Item_Grand_Duke%27s_Gloves_of_Fieryfur.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/01/Item_Grand_Duke%27s_Robe_of_Grace.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/1c/Item_Grand_Duke%27s_Ceremonial_Boots.png"
+  },
+  {
+    "name": "The Wind-Soaring Valorous",
+    "bonuses": "2 Piece: Increases ATK by 12%.\n4 Piece: Increases the wearer's CRIT Rate by 6%. When the wearer uses a follow-up attack, increases the DMG dealt by Ultimate by 36%, lasting for 1 turn(s).",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/1e/Item_The_Wind-Soaring_Valorous.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/1/10/Item_Valorous_Mask_of_Northern_Skies.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b8/Item_Valorous_Bracelet_of_Grappling_Hooks.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/95/Item_Valorous_Plate_of_Soaring_Flight.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/59/Item_Valorous_Greaves_of_Pursuing_Hunt.png"
+  },
+  {
+    "name": "Thief of Shooting Meteor",
+    "bonuses": "2 Piece: Increases Break Effect by 16%.\n4 Piece: Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/9c/Item_Thief_of_Shooting_Meteor.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/8/86/Item_Thief%27s_Myriad-Faced_Mask.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/b/b1/Item_Thief%27s_Gloves_With_Prints.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/7/70/Item_Thief%27s_Steel_Grappling_Hook.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d4/Item_Thief%27s_Meteor_Boots.png"
+  },
+  {
+    "name": "Wastelander of Banditry Desert",
+    "bonuses": "2 Piece: Increases Imaginary DMG by 10%.\n4 Piece: When attacking debuffed enemies, the wearer's CRIT Rate increases by 10%, and their CRIT DMG increases by 20% against Imprisoned enemies.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/aa/Item_Wastelander_of_Banditry_Desert.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/d/d4/Item_Wastelander%27s_Breathing_Mask.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/5/5a/Item_Wastelander%27s_Desert_Terminal.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/f/fb/Item_Wastelander%27s_Friar_Robe.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/46/Item_Wastelander%27s_Powered_Greaves.png"
+  },
+  {
+    "name": "Watchmaker, Master of Dream Machinations",
+    "bonuses": "2 Piece: Increases Break Effect by 16%.\n4 Piece: When the wearer uses their Ultimate on an ally, all allies' Break Effect increases by 30% for 2 turn(s). This effect cannot be stacked.",
+    "iconurl": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/ca/Item_Watchmaker%2C_Master_of_Dream_Machinations.png",
+    "head": "https://static.wikia.nocookie.net/houkai-star-rail/images/3/30/Item_Watchmaker%27s_Telescoping_Lens.png",
+    "hand": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/a6/Item_Watchmaker%27s_Fortuitous_Wristwatch.png",
+    "body": "https://static.wikia.nocookie.net/houkai-star-rail/images/0/01/Item_Watchmaker%27s_Illusory_Formal_Suit.png",
+    "feet": "https://static.wikia.nocookie.net/houkai-star-rail/images/e/e4/Item_Watchmaker%27s_Dream-Concealing_Dress_Shoes.png"
+  }
+]

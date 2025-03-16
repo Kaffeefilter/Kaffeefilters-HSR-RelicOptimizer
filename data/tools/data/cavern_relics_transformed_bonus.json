@@ -1,0 +1,244 @@
+{
+    "band_of_sizzling_thunder": {
+        "name": "Band of Sizzling Thunder",
+        "two_piece_bonus": {
+            "description": "Increases Lightning DMG by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When the wearer uses their Skill, increases the wearer's ATK by 20% for 1 turn(s).",
+            "effects": []
+        }
+    },
+    "champion_of_streetwise_boxing": {
+        "name": "Champion of Streetwise Boxing",
+        "two_piece_bonus": {
+            "description": "Increases Physical DMG by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "After the wearer attacks or is hit, their ATK increases by 5% for the rest of the battle. This effect can stack up to 5 time(s).",
+            "effects": []
+        }
+    },
+    "eagle_of_twilight_line": {
+        "name": "Eagle of Twilight Line",
+        "two_piece_bonus": {
+            "description": "Increases Wind DMG by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "After the wearer uses their Ultimate, their action is Advanced Forward by 25%.",
+            "effects": []
+        }
+    },
+    "firesmith_of_lava-forging": {
+        "name": "Firesmith of Lava-Forging",
+        "two_piece_bonus": {
+            "description": "Increases Fire DMG by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "Increases the wearer's Skill DMG by 12%. After unleashing Ultimate, increases the wearer's Fire DMG by 12% for the next attack.",
+            "effects": []
+        }
+    },
+    "genius_of_brilliant_stars": {
+        "name": "Genius of Brilliant Stars",
+        "two_piece_bonus": {
+            "description": "Increases Quantum DMG by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+            "effects": []
+        }
+    },
+    "guard_of_wuthering_snow": {
+        "name": "Guard of Wuthering Snow",
+        "two_piece_bonus": {
+            "description": "Reduces DMG taken by 8%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 Energy.",
+            "effects": []
+        }
+    },
+    "hunter_of_glacial_forest": {
+        "name": "Hunter of Glacial Forest",
+        "two_piece_bonus": {
+            "description": "Increases Ice DMG by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "After the wearer uses their Ultimate, their CRIT DMG increases by 25% for 2 turn(s).",
+            "effects": []
+        }
+    },
+    "iron_cavalry_against_the_scourge": {
+        "name": "Iron Cavalry Against the Scourge",
+        "two_piece_bonus": {
+            "description": "Increases Break Effect by 16%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "If the wearer's Break Effect is 150% or higher, the Break DMG dealt to the enemy target ignores 10% of their DEF. If the wearer's Break Effect is 250% or higher, the Super Break DMG dealt to the enemy target additionally ignores 15% of their DEF.",
+            "effects": []
+        }
+    },
+    "knight_of_purity_palace": {
+        "name": "Knight of Purity Palace",
+        "two_piece_bonus": {
+            "description": "Increases DEF by 15%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.",
+            "effects": []
+        }
+    },
+    "longevous_disciple": {
+        "name": "Longevous Disciple",
+        "two_piece_bonus": {
+            "description": "Increases Max HP by 12%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.",
+            "effects": []
+        }
+    },
+    "messenger_traversing_hackerspace": {
+        "name": "Messenger Traversing Hackerspace",
+        "two_piece_bonus": {
+            "description": "Increases SPD by 6%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.",
+            "effects": []
+        }
+    },
+    "musketeer_of_wild_wheat": {
+        "name": "Musketeer of Wild Wheat",
+        "two_piece_bonus": {
+            "description": "ATK increases by 12%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%.",
+            "effects": []
+        }
+    },
+    "passerby_of_wandering_cloud": {
+        "name": "Passerby of Wandering Cloud",
+        "two_piece_bonus": {
+            "description": "Increases Outgoing Healing by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "At the start of the battle, immediately regenerates 1 Skill Point.",
+            "effects": []
+        }
+    },
+    "pioneer_diver_of_dead_waters": {
+        "name": "Pioneer Diver of Dead Waters",
+        "two_piece_bonus": {
+            "description": "Increases DMG dealt to enemies with debuffs by 12%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).",
+            "effects": []
+        }
+    },
+    "prisoner_in_deep_confinement": {
+        "name": "Prisoner in Deep Confinement",
+        "two_piece_bonus": {
+            "description": "ATK increases by 12%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "For every DoT the target enemy is afflicted with, the wearer will ignore 6% of its DEF when dealing DMG to it. This effect is valid for a max of 3 DoTs.",
+            "effects": []
+        }
+    },
+    "sacerdos'_relived_ordeal": {
+        "name": "Sacerdos' Relived Ordeal",
+        "two_piece_bonus": {
+            "description": "Increases SPD by 6%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
+            "effects": []
+        }
+    },
+    "scholar_lost_in_erudition": {
+        "name": "Scholar Lost in Erudition",
+        "two_piece_bonus": {
+            "description": "Increases CRIT Rate by 8%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "Increases DMG dealt by Skill and Ultimate by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
+            "effects": []
+        }
+    },
+    "the_ashblazing_grand_duke": {
+        "name": "The Ashblazing Grand Duke",
+        "two_piece_bonus": {
+            "description": "Increases the DMG dealt by follow-up attacks by 20%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When the wearer uses follow-up attacks, increases the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a follow-up attack.",
+            "effects": []
+        }
+    },
+    "the_wind-soaring_valorous": {
+        "name": "The Wind-Soaring Valorous",
+        "two_piece_bonus": {
+            "description": "Increases ATK by 12%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "Increases the wearer's CRIT Rate by 6%. When the wearer uses a follow-up attack, increases the DMG dealt by Ultimate by 36%, lasting for 1 turn(s).",
+            "effects": []
+        }
+    },
+    "thief_of_shooting_meteor": {
+        "name": "Thief of Shooting Meteor",
+        "two_piece_bonus": {
+            "description": "Increases Break Effect by 16%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "Increases the wearer's Break Effect by 16%. After the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy.",
+            "effects": []
+        }
+    },
+    "wastelander_of_banditry_desert": {
+        "name": "Wastelander of Banditry Desert",
+        "two_piece_bonus": {
+            "description": "Increases Imaginary DMG by 10%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When attacking debuffed enemies, the wearer's CRIT Rate increases by 10%, and their CRIT DMG increases by 20% against Imprisoned enemies.",
+            "effects": []
+        }
+    },
+    "watchmaker,_master_of_dream_machinations": {
+        "name": "Watchmaker, Master of Dream Machinations",
+        "two_piece_bonus": {
+            "description": "Increases Break Effect by 16%.",
+            "effects": []
+        },
+        "four_piece_bonus": {
+            "description": "When the wearer uses their Ultimate on an ally, all allies' Break Effect increases by 30% for 2 turn(s). This effect cannot be stacked.",
+            "effects": []
+        }
+    }
+}

@@ -1,0 +1,40 @@
+hsr-relicoptimizer/
+├── relics/
+│   ├── __init__.py         # Macht das Verzeichnis zu einem Modul
+│   ├── relic.py            # Klassen und Logik für Relics
+│   ├── relic_set_lookup.py # Lookup-Tabelle für Sets und verwandte Funktionen
+│   ├── filters.py          # Funktionen für Filter und Vorauswahl
+├── main.py                 # Hauptprogramm, Steuerung der Abläufe
+├── requirements.txt        # Abhängigkeiten (z. B. externe Libraries)
+├── README.md               # Projektbeschreibung
+└── tests/
+    ├── __init__.py         # Testmodul
+    ├── test_relic.py       # Tests für Relic-Klassen
+    ├── test_filters.py     # Tests für Filter-Logik
+
+
+
+hsr-relicoptimizer/  
+│── data/  
+│   ├── relics/  
+│   │   ├── cavern_relics.json  
+│   │   ├── planar_ornaments.json  
+│   ├── characters.json  
+│   ├── lightcones.json  
+│── src/  
+│   ├── models/  
+│   │   ├── relic.py  
+│   │   ├── character.py  
+│   │   ├── lightcone.py  
+│   ├── optimizer/  
+│   │   ├── relic_optimizer.py  
+│   │   ├── stat_calculator.py  
+│   ├── ui/  
+│   │   ├── user_input.py  
+│   │   ├── display_results.py  
+│── tests/  
+│   ├── test_relic_optimizer.py  
+│   ├── test_stat_calculator.py  
+│── main.py  
+│── requirements.txt  
+│── README.md  
